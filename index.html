@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egipto 2026 | Guía Máster Familiar</title>
+    <style>
+        :root {
+            --primary: #c59b27;
+            --primary-dark: #8c6d19;
+            --bg: #f8f5f0;
+            --card-bg: #ffffff;
+            --text: #2c2c2c;
+            --accent: #1e3a8a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0; padding: 0;
+            padding-bottom: 75px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a, #332605);
+            color: #d4af37;
+            text-align: center;
+            padding: 18px 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        header h1 { margin: 0; font-size: 1.4rem; letter-spacing: 1px; }
+        header p { margin: 4px 0 0; font-size: 0.8rem; color: #ccc; }
+
+        .container { padding: 12px; max-width: 600px; margin: 0 auto; }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            border-left: 4px solid var(--primary);
+        }
+
+        .card h3 { margin-top: 0; color: var(--primary-dark); font-size: 1.05rem; display: flex; justify-content: space-between; align-items: center; }
+        .card p, .card li { font-size: 0.88rem; line-height: 1.4; }
+        
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .action-tag {
+            font-size: 0.72rem;
+            padding: 3px 7px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .tag-online { background: #dbeafe; color: #1e40af; border: 1px solid #bfdbfe; }
+        .tag-hotel { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+        .price-tag {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            color: white;
+            text-decoration: none;
+            padding: 5px 9px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 4px;
+            margin-right: 4px;
+        }
+
+        .btn-whatsapp { background-color: #25D366; }
+        .btn-maps { background-color: #ea4335; }
+        .btn-web { background-color: #2563eb; }
+        .btn-reviews { background-color: #00af87; }
+
+        /* Conversor */
+        .converter-box {
+            background: #2d3748;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .converter-inputs { display: flex; gap: 10px; margin-top: 10px; }
+        .converter-field { flex: 1; }
+        .converter-field label { display: block; font-size: 0.75rem; margin-bottom: 4px; color: #cbd5e1; }
+        .converter-field input {
+            width: 100%; padding: 8px; border-radius: 6px;
+            border: 1px solid #4a5568; background: #1a202c;
+            color: white; font-size: 1rem; box-sizing: border-box;
+        }
+
+        .rating { color: #f59e0b; font-weight: bold; font-size: 0.8rem; }
+        .reserve-tag { font-size: 0.72rem; padding: 2px 5px; border-radius: 4px; display: inline-block; margin-top: 4px; }
+        .reserve-yes { background: #fee2e2; color: #991b1b; }
+        .reserve-no { background: #dcfce7; color: #166534; }
+
+        .phrase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .phrase-box { background: #f0ede6; padding: 8px; border-radius: 6px; font-size: 0.8rem; }
+        .phrase-box strong { color: var(--accent); display: block; }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            background: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+        }
+
+        nav button {
+            background: none; border: none; padding: 8px 3px; flex: 1;
+            font-size: 0.68rem; color: #666; display: flex;
+            flex-direction: column; align-items: center; cursor: pointer;
+        }
+
+        nav button.active { color: var(--primary-dark); font-weight: bold; }
+        nav button span { font-size: 1.1rem; margin-bottom: 2px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🇪🇬 EXPEDICIÓN EGIPTO 2026</h1>
+        <p>Armando, Mónica y Armando Jr. | 10 - 18 Septiembre</p>
+    </header>
+
+    <div class="container">
+
+        <!-- PESTAÑA 1: ITINERARIO CON INSTRUCCIONES DE RESERVA -->
+        <div id="itinerario" class="tab-content active">
+            
+            <div class="card">
+                <h3><span class="badge">10 SEP</span> Llegada a El Cairo</h3>
+                <p><strong>Vuelo:</strong> SVQ -> CAI (13:25 - 22:25)[cite: 3]</p>
+                <p><strong>Visado:</strong> $25/persona en efectivo al aterrizar en el banco del aeropuerto.[cite: 3]</p>
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL GIZA</span><br>
+                <p><em>Transfer del aeropuerto al hotel en Giza.</em></p>
+                <a href="https://maps.google.com/?q=Grensha+Pyramids+inn+Giza" target="_blank" class="btn-link btn-maps">📍 Mapa Hotel Giza</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">11 SEP</span> Giza + Gran Museo (GEM)</h3>
+                
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL GIZA</span><br>
+                <p><strong>08:00: Pirámides de Giza y Esfinge.</strong><br>
+                <em>Chofer + Guía privado en español para el día completo (Pirámides + GEM).</em></p>
+                <a href="https://maps.google.com/?q=Giza+Pyramids" target="_blank" class="btn-link btn-maps">📍 Mapa Pirámides</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <span class="action-tag tag-online">🌐 RESERVA ONLINE PREVIA</span><br>
+                <p><strong>14:30: Gran Museo Egipcio (GEM).</strong><br>
+                <em>Comprar entrada con visita guiada oficial en español.</em></p>
+                <a href="https://tickets.gem.eg/" target="_blank" class="btn-link btn-web">🌐 Web Oficial GEM</a>
+                <a href="https://maps.google.com/?q=Grand+Egyptian+Museum" target="_blank" class="btn-link btn-maps">📍 Mapa GEM</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">12 SEP</span> Saqqara + Cairo Histórico</h3>
+                
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL GIZA</span><br>
+                <p><strong>08:30: Saqqara, Ciudadela y Khan el-Khalili.</strong><br>
+                <em>Chofer + Guía privado en español para el día completo.</em></p>
+
+                <span class="action-tag tag-online">🌐 RESERVA ONLINE O EN TAQUILLA</span><br>
+                <p><em>Entradas a Saqqara y Ciudadela (pagar con Tarjeta Revolut).</em></p>
+                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Web Oficial Monumentos</a>
+                <a href="https://maps.google.com/?q=Saqqara+Step+Pyramid" target="_blank" class="btn-link btn-maps">📍 Saqqara</a>
+                <a href="https://maps.google.com/?q=Khan+el-Khalili" target="_blank" class="btn-link btn-maps">📍 Khan Khalili</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">13 SEP</span> Vuelo a Lúxor</h3>
+                <p><strong>14:55 - 15:55:</strong> Vuelo CAI -> LXR (EgyptAir MS066)[cite: 1]</p>
+                
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
+                <p><em>Transfer de recogida en Aeropuerto de Lúxor (15:55) al Blue Nile House.[cite: 1, 6]</em></p>
+                <a href="https://maps.google.com/?q=Blue+Nile+House+Luxor" target="_blank" class="btn-link btn-maps">📍 Mapa Blue Nile House</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">14 SEP</span> Templos de Lúxor (East Bank)</h3>
+                
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
+                <p><strong>Mañana: Karnak y Templo de Lúxor.</strong><br>
+                <em>Chofer + Guía privado en español para la orilla este.</em></p>
+
+                <span class="action-tag tag-online">🌐 RESERVA ONLINE O EN TAQUILLA</span><br>
+                <p><em>Entradas a Karnak y Lúxor (pagar con Tarjeta Revolut).</em></p>
+                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Web Oficial Monumentos</a>
+                <a href="https://maps.google.com/?q=Karnak+Temple" target="_blank" class="btn-link btn-maps">📍 Karnak</a>
+                <a href="https://maps.google.com/?q=Luxor+Temple" target="_blank" class="btn-link btn-maps">📍 Templo Lúxor</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">15 SEP</span> 🎈 Globo + Valle de los Reyes</h3>
+                
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
+                <p><strong>04:30 AM: Vuelo en Globo Aerostático.</strong><br>
+                <em>Apalabrar las 3 plazas directamente con el Blue Nile House.[cite: 6]</em></p>
+                <p><strong>07:30 AM: Orilla Oeste (Valle de los Reyes + Hatshepsut).</strong><br>
+                <em>Chofer + Guía privado para la orilla oeste.</em></p>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <span class="action-tag tag-online">🌐 RESERVA ONLINE O EN TAQUILLA</span><br>
+                <p><strong>Entrada Especial Tumba de Seti I (KV17).</strong><br>
+                <em>Sacar online previamente o en la taquilla central con Tarjeta Revolut.</em></p>
+                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Web Tumba Seti I</a>
+                <a href="https://maps.google.com/?q=Valley+of+the+Kings" target="_blank" class="btn-link btn-maps">📍 Valle Reyes</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">16 SEP</span> Medinet Habu + Feluca</h3>
+                <p><strong>Mañana:</strong> Medinet Habu (Templo Ramsés III).</p>
+                
+                <span class="action-tag tag-online">⛵ EN SITU (EN LA ORILLA)</span><br>
+                <p><strong>17:00 PM: Paseo Privado en Feluca al atardecer.</strong><br>
+                <em>Negociar directamente en la orilla del Nilo ($15-20 USD total).</em></p>
+                <a href="https://maps.google.com/?q=Medinet+Habu" target="_blank" class="btn-link btn-maps">📍 Medinet Habu</a>
+            </div>
+
+            <div class="card">
+                <h3><span class="badge">17 SEP</span> Vuelo de Salida</h3>
+                <p><strong>14:10:</strong> Vuelo LXR -> MXP (easyJet)[cite: 2]</p>
+                
+                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
+                <p><em>Transfer del Blue Nile House al Aeropuerto de Lúxor (11:30 AM).[cite: 2, 6]</em></p>
+                <a href="https://maps.google.com/?q=Luxor+International+Airport" target="_blank" class="btn-link btn-maps">📍 Aeropuerto LXR</a>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 2: RESTAURANTES -->
+        <div id="restaurantes" class="tab-content">
+            <div class="card">
+                <h3>📍 Giza (Día 11)</h3>
+                
+                <p><strong>1. 139 Restaurant (Marriott Mena House)</strong> <span class="price-tag">30-45 €/pers</span><br>
+                <span class="rating">★ 4.6 (Google)</span> | <em>Vistas únicas a las pirámides.</em><br>
+                <span class="reserve-tag reserve-yes">RESERVA OBLIGATORIA</span></p>
+                <a href="https://maps.google.com/?q=139+Restaurant+Marriott+Mena+House" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294202-d1194680-Reviews-139_Pavilion-Giza_Giza_Governorate.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>2. Pyramids Restaurant / Lounge</strong> <span class="price-tag">12-20 €/pers</span><br>
+                <span class="rating">★ 4.3 (Google)</span> | <em>Comida egipcia tradicional muy cercana.</em><br>
+                <span class="reserve-tag reserve-no">Sin reserva</span></p>
+                <a href="https://maps.google.com/?q=Pyramids+Restaurant+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294202-d2483168-Reviews-Pyramids_Restaurant-Giza_Giza_Governorate.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+            </div>
+
+            <div class="card">
+                <h3>📍 El Cairo Centro / Bazar (Día 12)</h3>
+                
+                <p><strong>1. Naguib Mahfouz Cafe</strong> <span class="price-tag">15-25 €/pers</span><br>
+                <span class="rating">★ 4.4 (Google)</span> | <em>En pleno centro del bazar Khan. Excelente higiene.</em><br>
+                <span class="reserve-tag reserve-yes">RECOMENDADO RESERVAR</span></p>
+                <a href="https://maps.google.com/?q=Naguib+Mahfouz+Cafe" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294201-d1211181-Reviews-Naguib_Mahfouz_Cafe-Cairo_Cairo_Governorate.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>2. Abou El Sid (Zamalek)</strong> <span class="price-tag">18-28 €/pers</span><br>
+                <span class="rating">★ 4.3 (Google)</span> | <em>Cocina egipcia gourmet muy famosa.</em><br>
+                <span class="reserve-tag reserve-yes">RESERVA OBLIGATORIA</span></p>
+                <a href="https://maps.google.com/?q=Abou+El+Sid+Zamalek" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294201-d805096-Reviews-Abou_El_Sid-Cairo_Cairo_Governorate.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>3. Koshary Abou Tarek</strong> <span class="price-tag">3-6 €/pers</span><br>
+                <span class="rating">★ 4.5 (Google)</span> | <em>El templo del plato nacional. Ultra barato y rápido.</em><br>
+                <span class="reserve-tag reserve-no">Sin reserva</span></p>
+                <a href="https://maps.google.com/?q=Koshary+Abou+Tarek" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294201-d1088619-Reviews-Koshary_Abou_Tarek-Cairo_Cairo_Governorate.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+            </div>
+
+            <div class="card">
+                <h3>📍 Lúxor - West Bank (Junto al Hotel)</h3>
+                
+                <p><strong>1. Nile Valley Restaurant</strong> <span class="price-tag">8-15 €/pers</span><br>
+                <span class="rating">★ 4.6 (Google)</span> | <em>Terraza preciosa junto al agua. Comida muy segura.</em><br>
+                <span class="reserve-tag reserve-no">Sin reserva</span></p>
+                <a href="https://maps.google.com/?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294205-d1487002-Reviews-Nile_Valley_Restaurant-Luxor_Nile_River_Valley.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>2. El-Kababgy West Bank</strong> <span class="price-tag">10-18 €/pers</span><br>
+                <span class="rating">★ 4.4 (Google)</span> | <em>Expertos en parrilla de carne y pollo asado.</em><br>
+                <span class="reserve-tag reserve-no">Sin reserva</span></p>
+                <a href="https://maps.google.com/?q=El+Kababgy+Luxor+West+Bank" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294205-d4546415-Reviews-El_Kababgy-Luxor_Nile_River_Valley.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>3. Tutankhamon Restaurant</strong> <span class="price-tag">7-14 €/pers</span><br>
+                <span class="rating">★ 4.5 (Google)</span> | <em>Rooftop acogedor mirando al río Nilo.</em><br>
+                <span class="reserve-tag reserve-no">Sin reserva</span></p>
+                <a href="https://maps.google.com/?q=Tutankhamon+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294205-d2256985-Reviews-Tutankhamon-Luxor_Nile_River_Valley.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+            </div>
+
+            <div class="card">
+                <h3>📍 Lúxor - East Bank (Día Templos)</h3>
+                
+                <p><strong>1. Sofra Restaurant & Cafe</strong> <span class="price-tag">12-20 €/pers</span><br>
+                <span class="rating">★ 4.5 (Google)</span> | <em>El local de referencia en Lúxor. Casa señorial.</em><br>
+                <span class="reserve-tag reserve-yes">RECOMENDADO RESERVAR</span></p>
+                <a href="https://maps.google.com/?q=Sofra+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294205-d1443684-Reviews-Sofra_Restaurant_Cafe-Luxor_Nile_River_Valley.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>2. Al-Sahaby Lane Restaurant</strong> <span class="price-tag">10-16 €/pers</span><br>
+                <span class="rating">★ 4.6 (Google)</span> | <em>Azotea sobre el bazar con vistas al templo.</em><br>
+                <span class="reserve-tag reserve-yes">RECOMENDADO RESERVAR</span></p>
+                <a href="https://maps.google.com/?q=Al-Sahaby+Lane+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294205-d1830678-Reviews-Al_Sahaby_Lane_Restaurant-Luxor_Nile_River_Valley.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>3. 1886 Restaurant (Winter Palace)</strong> <span class="price-tag">45-70 €/pers</span><br>
+                <span class="rating">★ 4.7 (Google)</span> | <em>Alta cocina colonial histórica. Exige chaqueta.</em><br>
+                <span class="reserve-tag reserve-yes">RESERVA OBLIGATORIA</span></p>
+                <a href="https://maps.google.com/?q=Sofitel+Winter+Palace+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <a href="https://www.tripadvisor.es/Restaurant_Review-g294205-d1194676-Reviews-1886_Restaurant-Luxor_Nile_River_Valley.html" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 3: PAGOS Y CONVERSOR -->
+        <div id="pagos" class="tab-content">
+            <div class="converter-box">
+                <h3 style="margin:0; font-size:1rem; color:#d4af37;">🧮 Conversor Euros ↔ Libras Egipcias</h3>
+                <p style="font-size:0.75rem; color:#a0aec0; margin:4px 0 10px;">Tipo de cambio aprox (1 € ≈ 53 EGP)</p>
+                
+                <div class="converter-inputs">
+                    <div class="converter-field">
+                        <label>Euros (€)</label>
+                        <input type="number" id="eurInput" placeholder="10" oninput="convertEurToEgp()">
+                    </div>
+                    <div class="converter-field">
+                        <label>Libras (EGP)</label>
+                        <input type="number" id="egpInput" placeholder="530" oninput="convertEgpToEur()">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>💳 Reglas de Pago Revolut</h3>
+                <ul>
+                    <li><strong>Elegir en datáfono:</strong> Seleccionar siempre <u>EGP (Libra Egipcia)</u>.</li>
+                    <li><strong>Visado Aeropuerto:</strong> $25 USD exactos por persona en efectivo.</li>
+                    <li><strong>Taquillas Monumentos:</strong> Pagar con tarjeta Revolut física obligatoriamente.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>💵 Guía Rápida de Propinas</h3>
+                <ul>
+                    <li><strong>Maleteros / Transfer:</strong> 20 - 50 EGP</li>
+                    <li><strong>Limpieza Hotel (por día):</strong> 50 - 100 EGP</li>
+                    <li><strong>Lavabos Públicos:</strong> 10 - 20 EGP</li>
+                    <li><strong>Chofer día completo:</strong> 300 - 400 EGP (el grupo)</li>
+                    <li><strong>Guía privado día completo:</strong> 500 - 800 EGP (el grupo)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 4: REGLAS, CHECKLIST Y ENLACES OFICIALES -->
+        <div id="reglas" class="tab-content">
+            
+            <div class="card">
+                <h3>📋 CHECKLIST: Gestiones con los Hoteles</h3>
+                <p><strong>1. Con Grensha Pyramids Inn (Giza):</strong></p>
+                <ul>
+                    <li>[ ] Transfer de llegada el 10 Sep (22:25 CAI)[cite: 3, 4].</li>
+                    <li>[ ] Chofer + Guía privado español (Día 11: Pirámides + GEM).</li>
+                    <li>[ ] Chofer + Guía privado español (Día 12: Saqqara + Cairo Histórico).</li>
+                </ul>
+                <a href="https://wa.me/201009193772" class="btn-link btn-whatsapp" target="_blank">WhatsApp Hotel Giza</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>2. Con Blue Nile House (Lúxor):</strong></p>
+                <ul>
+                    <li>[ ] Transfer recogida aeropuerto Lúxor el 13 Sep (15:55 MS066)[cite: 1, 6].</li>
+                    <li>[ ] Reserva 3 plazas Vuelo en Globo Aerostático (15 Sep mañana).</li>
+                    <li>[ ] Chofer + Guía privado español (Día 14: Karnak y Lúxor).</li>
+                    <li>[ ] Chofer + Guía privado español (Día 15: Valle Reyes + Hatshepsut).</li>
+                    <li>[ ] Transfer salida hacia el aeropuerto Lúxor el 17 Sep (11:30 AM)[cite: 2, 6].</li>
+                </ul>
+                <a href="https://wa.me/201002677970" class="btn-link btn-whatsapp" target="_blank">WhatsApp Hotel Lúxor</a>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Directorio Oficial de Enlaces de Reserva</h3>
+                <p><strong>1. Gran Museo Egipcio (GEM):</strong> Entrada libre + Tour guiado oficial en español.</p>
+                <a href="https://tickets.gem.eg/" target="_blank" class="btn-link btn-web">🌐 Comprar Entradas GEM</a>
+
+                <p style="margin-top:10px;"><strong>2. Ministerio de Monumentos (Egipto):</strong> Para Tumba de Seti I (KV17) y monumentos generales.</p>
+                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Portal Oficial EgyMonuments</a>
+            </div>
+
+            <div class="card">
+                <h3>🛡️ Reglas de Oro de Salud e Higiene</h3>
+                <ol>
+                    <li><strong>AGUA:</strong> Solo embotellada y precintada. Usadla también para lavaros los dientes. Evitad cubitos de hielo informales.</li>
+                    <li><strong>COMIDA EN LA CALLE:</strong> Solo comer alimentos bien cocinados o fritos al momento. Evitar ensaladas/fruta cortada en puestos de calle.</li>
+                    <li><strong>HIGIENE:</strong> Usar gel hidroalcohólico antes de tocar pan/alimentos.</li>
+                    <li><strong>REPELENTE:</strong> Usar repelente fuerte (Relec) al atardecer junto al Nilo.</li>
+                </ol>
+            </div>
+
+            <div class="card">
+                <h3>🗣️ Palabras Clave en Árabe</h3>
+                <div class="phrase-grid">
+                    <div class="phrase-box"><strong>Hola</strong> Salam Alaykum</div>
+                    <div class="phrase-box"><strong>Gracias</strong> Shukran</div>
+                    <div class="phrase-box"><strong>Por Favor</strong> Min Fadlak</div>
+                    <div class="phrase-box"><strong>No, gracias</strong> Laa, Shukran</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- NAVEGACIÓN INFERIOR -->
+    <nav>
+        <button class="active" onclick="switchTab('itinerario', this)">
+            <span>📍</span>Ruta
+        </button>
+        <button onclick="switchTab('restaurantes', this)">
+            <span>🍽️</span>Comer
+        </button>
+        <button onclick="switchTab('pagos', this)">
+            <span>🧮</span>Pagos
+        </button>
+        <button onclick="switchTab('reglas', this)">
+            <span>🛡️</span>Info/Ayuda
+        </button>
+    </nav>
+
+    <script>
+        const RATE = 53; // 1 EUR = 53 EGP aprox
+
+        function convertEurToEgp() {
+            const eur = document.getElementById('eurInput').value;
+            if (eur === "") { document.getElementById('egpInput').value = ""; return; }
+            document.getElementById('egpInput').value = (eur * RATE).toFixed(0);
+        }
+
+        function convertEgpToEur() {
+            const egp = document.getElementById('egpInput').value;
+            if (egp === "") { document.getElementById('eurInput').value = ""; return; }
+            document.getElementById('eurInput').value = (egp / RATE).toFixed(2);
+        }
+
+        function switchTab(tabId, btn) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            btn.classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
