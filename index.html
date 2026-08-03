@@ -91,11 +91,11 @@
             gap: 4px;
             color: white;
             text-decoration: none;
-            padding: 5px 9px;
+            padding: 6px 11px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 6px;
             margin-right: 4px;
         }
 
@@ -105,15 +105,28 @@
         .btn-reviews { background-color: #00af87; }
         .btn-youtube { background-color: #ff0000; }
 
-        .visual-img {
+        .visual-box {
             width: 100%;
-            height: 190px;
-            object-fit: cover;
+            height: 160px;
             border-radius: 8px;
             margin: 8px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-            background-color: #e2e8f0;
         }
+        .visual-box span { font-size: 3.5rem; margin-bottom: 4px; }
+        .visual-box h4 { margin: 0; font-size: 1.1rem; letter-spacing: 1px; text-transform: uppercase; }
+
+        .bg-giza { background: linear-gradient(135deg, #d97706, #78350f); }
+        .bg-gem { background: linear-gradient(135deg, #1e40af, #1e1b4b); }
+        .bg-saqqara { background: linear-gradient(135deg, #b45309, #451a03); }
+        .bg-globo { background: linear-gradient(135deg, #0284c7, #0369a1); }
+        .bg-tumba { background: linear-gradient(135deg, #9333ea, #4c1d95); }
+        .bg-feluca { background: linear-gradient(135deg, #059669, #064e3b); }
 
         .fun-fact {
             background: #fffbe3;
@@ -226,10 +239,10 @@
 
             <div class="card">
                 <h3><span class="badge">13 SEP</span> Vuelo a Lúxor</h3>
-                <p><strong>14:55 - 15:55:</strong> Vuelo CAI -> LXR (EgyptAir MS066)</p>
+                <p><strong>14:55 - 15:55:</strong> Vuelo CAI -> LXR (EgyptAir MS066)[cite: 1]</p>
                 
                 <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
-                <p><em>Transfer de recogida en Aeropuerto de Lúxor (15:55) al Blue Nile House.</em></p>
+                <p><em>Transfer de recogida en Aeropuerto de Lúxor (15:55) al Blue Nile House.[cite: 1]</em></p>
                 <a href="https://maps.google.com/?q=Blue+Nile+House+Luxor" target="_blank" class="btn-link btn-maps">📍 Mapa Blue Nile House</a>
             </div>
 
@@ -277,23 +290,26 @@
 
             <div class="card">
                 <h3><span class="badge">17 SEP</span> Vuelo de Salida</h3>
-                <p><strong>14:10:</strong> Vuelo LXR -> MXP (easyJet)</p>
+                <p><strong>14:10:</strong> Vuelo LXR -> MXP (easyJet)[cite: 2]</p>
                 
                 <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
-                <p><em>Transfer del Blue Nile House al Aeropuerto de Lúxor (11:30 AM).</em></p>
+                <p><em>Transfer del Blue Nile House al Aeropuerto de Lúxor (11:30 AM).[cite: 2]</em></p>
                 <a href="https://maps.google.com/?q=Luxor+International+Airport" target="_blank" class="btn-link btn-maps">📍 Aeropuerto LXR</a>
             </div>
         </div>
 
-        <!-- PESTAÑA 2: GUÍA VISUAL -->
+        <!-- PESTAÑA 2: GUÍA VISUAL 100% GARANTIZADA -->
         <div id="visual" class="tab-content">
             
             <div class="card">
                 <h3>📐 Pirámides de Giza y Esfinge</h3>
-                <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Pirámides de Giza">
+                <div class="visual-box bg-giza">
+                    <span>🔺</span>
+                    <h4>Giza & Esfinge</h4>
+                </div>
                 <p>Visitaremos la meseta de Giza con la Gran Pirámide de Keops, Kefrén, Micerino y la Gran Esfinge.</p>
                 
-                <a href="https://www.youtube.com/watch?v=k_a36gZiq_o" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Pirámides)</a>
+                <a href="https://www.youtube.com/results?search_query=giza+pyramids+tour+4k+documentary" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Pirámides)</a>
 
                 <div class="fun-fact">
                     💡 <strong>¿Sabías que...?</strong> Las pirámides estaban originalmente revestidas con bloques de piedra caliza blanca pulida que reflejaban la luz del sol.
@@ -302,10 +318,13 @@
 
             <div class="card">
                 <h3>🏛️ Gran Museo Egipcio (GEM)</h3>
-                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Gran Museo Egipcio">
+                <div class="visual-box bg-gem">
+                    <span>🏛️</span>
+                    <h4>Gran Museo Egipcio</h4>
+                </div>
                 <p>El museo de arqueología más grande del mundo dedicado a una sola civilización, donde se expone el tesoro completo de Tutankamón.</p>
 
-                <a href="https://www.youtube.com/watch?v=130J3aD3s64" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Gran Museo)</a>
+                <a href="https://www.youtube.com/results?search_query=grand+egyptian+museum+tour+cairo" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Gran Museo)</a>
 
                 <div class="fun-fact">
                     💡 <strong>Dato curioso:</strong> En el atrio principal os recibirá la monumental estatua de Ramsés II, con 11 metros de altura y 83 toneladas.
@@ -314,18 +333,24 @@
 
             <div class="card">
                 <h3>🏜️ Pirámide Escalonada de Saqqara</h3>
-                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Saqqara Pirámide de Zoser">
+                <div class="visual-box bg-saqqara">
+                    <span>🧱</span>
+                    <h4>Saqqara (Zoser)</h4>
+                </div>
                 <p>Diseñada por el genio Imhotep para el faraón Zoser, constituye la primera construcción de piedra de gran tamaño de la historia.</p>
 
-                <a href="https://www.youtube.com/watch?v=7u236NfM-m8" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Saqqara)</a>
+                <a href="https://www.youtube.com/results?search_query=saqqara+step+pyramid+tour+egypt" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Saqqara)</a>
             </div>
 
             <div class="card">
                 <h3>🎈 Vuelo en Globo sobre Lúxor</h3>
-                <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Globos en Luxor">
+                <div class="visual-box bg-globo">
+                    <span>🎈</span>
+                    <h4>Vuelo en Globo (Lúxor)</h4>
+                </div>
                 <p>Experiencia al amanecer sobrevolando la Orilla Oeste del Nilo, observando los templos funerarios y el Valle de los Reyes.</p>
 
-                <a href="https://www.youtube.com/watch?v=18mSItGjYw4" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Globo Lúxor)</a>
+                <a href="https://www.youtube.com/results?search_query=hot+air+balloon+luxor+sunrise+experience" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Globo Lúxor)</a>
 
                 <div class="fun-fact">
                     💡 <strong>Experiencia Top:</strong> Lúxor es uno de los mejores lugares del mundo para volar en globo por sus cielos despejados y concentración de monumentos.
@@ -334,18 +359,24 @@
 
             <div class="card">
                 <h3>👑 Tumba de Seti I (Valle de los Reyes)</h3>
-                <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Tumba Seti I KV17">
+                <div class="visual-box bg-tumba">
+                    <span>👑</span>
+                    <h4>Tumba Seti I (KV17)</h4>
+                </div>
                 <p>La sepultura más profunda, extensa y decorada del Valle de los Reyes (KV17), destacando por el impecable colorido de sus relieves.</p>
 
-                <a href="https://www.youtube.com/watch?v=mD0kY8GZk3E" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Tumba Seti I)</a>
+                <a href="https://www.youtube.com/results?search_query=tomb+of+seti+I+valley+of+the+kings+KV17" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Tumba Seti I)</a>
             </div>
 
             <div class="card">
                 <h3>⛵ Navegación en Feluca por el Nilo</h3>
-                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Feluca en el Nilo">
+                <div class="visual-box bg-feluca">
+                    <span>⛵</span>
+                    <h4>Feluca en el Nilo</h4>
+                </div>
                 <p>Paseo privado en embarcación de vela tradicional al atardecer por las aguas del Nilo a su paso por Lúxor.</p>
 
-                <a href="https://www.youtube.com/watch?v=Kz69k_M8Iog" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Navegación Nilo)</a>
+                <a href="https://www.youtube.com/results?search_query=felucca+ride+luxor+nile+sunset+vlog" target="_blank" class="btn-link btn-youtube">▶️ Ver Tour en Vídeo (Navegación Nilo)</a>
             </div>
 
         </div>
@@ -533,11 +564,11 @@
 
                 <p><strong>2. Con Blue Nile House (Lúxor):</strong></p>
                 <ul>
-                    <li>[ ] Transfer recogida aeropuerto Lúxor el 13 Sep (15:55 MS066).</li>
+                    <li>[ ] Transfer recogida aeropuerto Lúxor el 13 Sep (15:55 MS066)[cite: 1].</li>
                     <li>[ ] Reserva 3 plazas Vuelo en Globo Aerostático (15 Sep mañana).</li>
                     <li>[ ] Chofer + Guía privado español (Día 14: Karnak y Lúxor).</li>
                     <li>[ ] Chofer + Guía privado español (Día 15: Valle Reyes + Hatshepsut).</li>
-                    <li>[ ] Transfer salida hacia el aeropuerto Lúxor el 17 Sep (11:30 AM).</li>
+                    <li>[ ] Transfer salida hacia el aeropuerto Lúxor el 17 Sep (11:30 AM)[cite: 2].</li>
                 </ul>
                 <a href="https://wa.me/201002677970" class="btn-link btn-whatsapp" target="_blank">WhatsApp Hotel Lúxor</a>
             </div>
