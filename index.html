@@ -104,6 +104,37 @@
         .btn-web { background-color: #2563eb; }
         .btn-reviews { background-color: #00af87; }
 
+        /* Estilos para Vídeos e Imágenes */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            margin: 10px 0;
+            background: #000;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
+        }
+        .visual-img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .fun-fact {
+            background: #fffbe3;
+            border-left: 3px solid #f59e0b;
+            padding: 8px 10px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
+
         /* Conversor */
         .converter-box {
             background: #2d3748;
@@ -144,7 +175,7 @@
 
         nav button {
             background: none; border: none; padding: 8px 3px; flex: 1;
-            font-size: 0.68rem; color: #666; display: flex;
+            font-size: 0.65rem; color: #666; display: flex;
             flex-direction: column; align-items: center; cursor: pointer;
         }
 
@@ -167,7 +198,7 @@
             <div class="card">
                 <h3><span class="badge">10 SEP</span> Llegada a El Cairo</h3>
                 <p><strong>Vuelo:</strong> SVQ -> CAI (13:25 - 22:25)</p>
-                <p><strong>Visado:</strong> $25/persona en efectivo al aterrizar en el banco del aeropuerto.[cite: 3]</p>
+                <p><strong>Visado:</strong> $25/persona en efectivo al aterrizar en el banco del aeropuerto.</p>
                 <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL GIZA</span><br>
                 <p><em>Transfer reservado ($25 USD) con el hotel en Giza.</em></p>
                 <a href="https://maps.google.com/?q=Grensha+Pyramids+inn+Giza" target="_blank" class="btn-link btn-maps">📍 Mapa Hotel Giza</a>
@@ -179,193 +210,138 @@
                 <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL GIZA</span><br>
                 <p><strong>08:00: Pirámides de Giza y Esfinge.</strong><br>
                 <em>Chofer + Guía privado en español para el día completo (Pirámides + GEM).</em></p>
-                <a href="https://maps.google.com/?q=Giza+Pyramids" target="_blank" class="btn-link btn-maps">📍 Mapa Pirámides</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
 
                 <span class="action-tag tag-online">🌐 RESERVA ONLINE PREVIA</span><br>
                 <p><strong>14:30: Gran Museo Egipcio (GEM).</strong><br>
                 <em>Comprar entrada con visita guiada oficial en español.</em></p>
                 <a href="https://tickets.gem.eg/" target="_blank" class="btn-link btn-web">🌐 Web Oficial GEM</a>
-                <a href="https://maps.google.com/?q=Grand+Egyptian+Museum" target="_blank" class="btn-link btn-maps">📍 Mapa GEM</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">12 SEP</span> Saqqara + Cairo Histórico</h3>
-                
-                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL GIZA</span><br>
                 <p><strong>08:30: Saqqara, Ciudadela y Khan el-Khalili.</strong><br>
                 <em>Chofer + Guía privado en español para el día completo.</em></p>
-
-                <span class="action-tag tag-online">🌐 RESERVA ONLINE O EN TAQUILLA</span><br>
-                <p><em>Entradas a Saqqara y Ciudadela (pagar con Tarjeta Revolut).</em></p>
-                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Web Oficial Monumentos</a>
-                <a href="https://maps.google.com/?q=Saqqara+Step+Pyramid" target="_blank" class="btn-link btn-maps">📍 Saqqara</a>
-                <a href="https://maps.google.com/?q=Khan+el-Khalili" target="_blank" class="btn-link btn-maps">📍 Khan Khalili</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">13 SEP</span> Vuelo a Lúxor</h3>
-                <p><strong>14:55 - 15:55:</strong> Vuelo CAI -> LXR (EgyptAir MS066)[cite: 1]</p>
-                
-                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
-                <p><em>Transfer de recogida en Aeropuerto de Lúxor (15:55) al Blue Nile House.[cite: 1]</em></p>
-                <a href="https://maps.google.com/?q=Blue+Nile+House+Luxor" target="_blank" class="btn-link btn-maps">📍 Mapa Blue Nile House</a>
+                <p><strong>14:55 - 15:55:</strong> Vuelo CAI -> LXR (EgyptAir MS066)</p>
+                <p><em>Transfer de recogida en Aeropuerto de Lúxor al Blue Nile House.</em></p>
             </div>
 
             <div class="card">
                 <h3><span class="badge">14 SEP</span> Templos de Lúxor (East Bank)</h3>
-                
-                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
-                <p><strong>Mañana: Karnak y Templo de Lúxor.</strong><br>
-                <em>Chofer + Guía privado en español para la orilla este.</em></p>
-
-                <span class="action-tag tag-online">🌐 RESERVA ONLINE O EN TAQUILLA</span><br>
-                <p><em>Entradas a Karnak y Lúxor (pagar con Tarjeta Revolut).</em></p>
-                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Web Oficial Monumentos</a>
-                <a href="https://maps.google.com/?q=Karnak+Temple" target="_blank" class="btn-link btn-maps">📍 Karnak</a>
-                <a href="https://maps.google.com/?q=Luxor+Temple" target="_blank" class="btn-link btn-maps">📍 Templo Lúxor</a>
+                <p><strong>Mañana: Karnak y Templo de Lúxor.</strong></p>
             </div>
 
             <div class="card">
                 <h3><span class="badge">15 SEP</span> 🎈 Globo + Valle de los Reyes</h3>
-                
-                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
                 <p><strong>04:30 AM: Vuelo en Globo Aerostático.</strong><br>
-                <em>Apalabrar las 3 plazas directamente con el Blue Nile House.</em></p>
-                <p><strong>07:30 AM: Orilla Oeste (Valle de los Reyes + Hatshepsut).</strong><br>
-                <em>Chofer + Guía privado para la orilla oeste.</em></p>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <span class="action-tag tag-online">🌐 RESERVA ONLINE O EN TAQUILLA</span><br>
-                <p><strong>Entrada Especial Tumba de Seti I (KV17).</strong><br>
-                <em>Sacar online previamente o en la taquilla central con Tarjeta Revolut.</em></p>
-                <a href="https://egymonuments.com/" target="_blank" class="btn-link btn-web">🌐 Web Tumba Seti I</a>
-                <a href="https://maps.google.com/?q=Valley+of+the+Kings" target="_blank" class="btn-link btn-maps">📍 Valle Reyes</a>
+                <strong>07:30 AM: Orilla Oeste (Valle de los Reyes + Seti I).</strong></p>
             </div>
 
             <div class="card">
                 <h3><span class="badge">16 SEP</span> Medinet Habu + Feluca</h3>
-                <p><strong>Mañana:</strong> Medinet Habu (Templo Ramsés III).</p>
-                
-                <span class="action-tag tag-online">⛵ EN SITU (EN LA ORILLA)</span><br>
-                <p><strong>17:00 PM: Paseo Privado en Feluca al atardecer.</strong><br>
-                <em>Negociar directamente en la orilla del Nilo ($15-20 USD total).</em></p>
-                <a href="https://maps.google.com/?q=Medinet+Habu" target="_blank" class="btn-link btn-maps">📍 Medinet Habu</a>
+                <p><strong>Mañana:</strong> Medinet Habu.<br>
+                <strong>17:00 PM: Paseo Privado en Feluca al atardecer.</strong></p>
             </div>
 
             <div class="card">
                 <h3><span class="badge">17 SEP</span> Vuelo de Salida</h3>
-                <p><strong>14:10:</strong> Vuelo LXR -> MXP (easyJet)[cite: 2]</p>
-                
-                <span class="action-tag tag-hotel">🏨 GESTIONAR CON HOTEL LÚXOR</span><br>
-                <p><em>Transfer del Blue Nile House al Aeropuerto de Lúxor (11:30 AM).[cite: 2]</em></p>
-                <a href="https://maps.google.com/?q=Luxor+International+Airport" target="_blank" class="btn-link btn-maps">📍 Aeropuerto LXR</a>
+                <p><strong>14:10:</strong> Vuelo LXR -> MXP (easyJet)</p>
             </div>
         </div>
 
-        <!-- PESTAÑA 2: RESTAURANTES -->
-        <div id="restaurantes" class="tab-content">
+        <!-- PESTAÑA NUEVA: GUÍA VISUAL CON VÍDEOS Y IMÁGENES -->
+        <div id="visual" class="tab-content">
             
             <div class="card">
-                <h3>📍 Giza (Día 11)</h3>
+                <h3>🎬 Las Pirámides y la Esfinge</h3>
+                <p>La única Maravilla del Mundo Antiguo que sigue en pie. Caminaremos junto a Keops, Kefrén y Micerino.</p>
                 
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/mK3RTh939lE" title="Pirámides de Giza" allowfullscreen></iframe>
+                </div>
+
+                <div class="fun-fact">
+                    💡 <strong>¿Sabías que...?</strong> Las pirámides estaban cubiertas por una capa de piedra caliza blanca pulida que brillaba como un espejo bajo el sol de Egipto.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🏛️ El Gran Museo Egipcio (GEM)</h3>
+                <p>El museo de arqueología más grande del mundo dedicado a una sola civilización. Aquí contemplaremos el tesoro completo de Tutankamón.</p>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5U9NAnOAt_4" title="Gran Museo Egipcio GEM" allowfullscreen></iframe>
+                </div>
+
+                <div class="fun-fact">
+                    💡 <strong>Dato curioso:</strong> La estatua gigante del faraón Ramsés II en el vestíbulo mide 11 metros de altura y pesa 83 toneladas.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📐 Saqqara y la Pirámide Escalonada</h3>
+                <p>El primer edificio monumental de piedra construido por la humanidad por el legendario arquitecto Imhotep.</p>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/l2wZ4mN3G30" title="Saqqara Piramide Escalonada" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>🎈 Vuelo en Globo sobre Lúxor</h3>
+                <p>Ver amanecer sobre el río Nilo, el Valle de los Reyes y los templos milenarios desde un globo aerostático.</p>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/QJ9qB4fOQIs" title="Globo Luxor" allowfullscreen></iframe>
+                </div>
+
+                <div class="fun-fact">
+                    💡 <strong>Experiencia Top:</strong> Lúxor está considerada la capital mundial de los paseos en globo por sus cielos despejados y sus vistas panorámicas.
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>👑 Tumba de Seti I (Valle de los Reyes)</h3>
+                <p>La tumba más espectacular y mejor conservada de todo Egipto, con relucientes jeroglíficos a todo color en sus paredes.</p>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/N-0-T3oK9xM" title="Tumba de Seti I" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>⛵ Paseo en Feluca al Atardecer</h3>
+                <p>Navegar por el majestuoso río Nilo en un barco de vela tradicional egipcio tal y como lo hacían hace miles de años.</p>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/m06jJgK1Tz8" title="Feluca Nilo Luxor" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PESTAÑA 3: RESTAURANTES -->
+        <div id="restaurantes" class="tab-content">
+            <div class="card">
+                <h3>📍 Giza (Día 11)</h3>
                 <p><strong>1. 139 Pavilion (Marriott Mena House)</strong> <span class="price-tag">30-45 €/pers</span><br>
-                <span class="rating">★ 4.6</span> | <em>Vistas únicas a las pirámides.</em><br>
-                <span class="reserve-tag reserve-yes">RESERVA OBLIGATORIA</span></p>
+                <span class="rating">★ 4.6</span> | <em>Vistas únicas a las pirámides.</em></p>
                 <a href="https://maps.google.com/?q=139+Pavilion+Marriott+Mena+House+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
                 <a href="https://www.tripadvisor.es/Search?q=139+Pavilion+Marriott+Mena+House+Giza" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>2. Pyramids Restaurant / Lounge</strong> <span class="price-tag">12-20 €/pers</span><br>
-                <span class="rating">★ 4.3</span> | <em>Comida egipcia tradicional muy cercana.</em><br>
-                <span class="reserve-tag reserve-no">Sin reserva</span></p>
-                <a href="https://maps.google.com/?q=Pyramids+Restaurant+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Pyramids+Restaurant+Giza" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
             </div>
-
             <div class="card">
                 <h3>📍 El Cairo Centro / Bazar (Día 12)</h3>
-                
                 <p><strong>1. Naguib Mahfouz Cafe</strong> <span class="price-tag">15-25 €/pers</span><br>
-                <span class="rating">★ 4.4</span> | <em>En pleno centro del bazar Khan. Excelente higiene.</em><br>
-                <span class="reserve-tag reserve-yes">RECOMENDADO RESERVAR</span></p>
+                <span class="rating">★ 4.4</span> | <em>En pleno centro del bazar Khan.</em></p>
                 <a href="https://maps.google.com/?q=Naguib+Mahfouz+Cafe+Cairo" target="_blank" class="btn-link btn-maps">📍 Maps</a>
                 <a href="https://www.tripadvisor.es/Search?q=Naguib+Mahfouz+Cafe+Cairo" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>2. Abou El Sid (Zamalek)</strong> <span class="price-tag">18-28 €/pers</span><br>
-                <span class="rating">★ 4.3</span> | <em>Cocina egipcia gourmet muy famosa.</em><br>
-                <span class="reserve-tag reserve-yes">RESERVA OBLIGATORIA</span></p>
-                <a href="https://maps.google.com/?q=Abou+El+Sid+Zamalek+Cairo" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Abou+El+Sid+Zamalek+Cairo" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>3. Koshary Abou Tarek</strong> <span class="price-tag">3-6 €/pers</span><br>
-                <span class="rating">★ 4.5</span> | <em>El templo del plato nacional. Ultra barato y rápido.</em><br>
-                <span class="reserve-tag reserve-no">Sin reserva</span></p>
-                <a href="https://maps.google.com/?q=Koshary+Abou+Tarek+Cairo" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Koshary+Abou+Tarek+Cairo" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-            </div>
-
-            <div class="card">
-                <h3>📍 Lúxor - West Bank (Junto al Hotel)</h3>
-                
-                <p><strong>1. Nile Valley Restaurant</strong> <span class="price-tag">8-15 €/pers</span><br>
-                <span class="rating">★ 4.6</span> | <em>Terraza preciosa junto al agua. Comida muy segura.</em><br>
-                <span class="reserve-tag reserve-no">Sin reserva</span></p>
-                <a href="https://maps.google.com/?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>2. El-Kababgy West Bank</strong> <span class="price-tag">10-18 €/pers</span><br>
-                <span class="rating">★ 4.4</span> | <em>Expertos en parrilla de carne y pollo asado.</em><br>
-                <span class="reserve-tag reserve-no">Sin reserva</span></p>
-                <a href="https://maps.google.com/?q=El+Kababgy+Luxor+West+Bank" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=El+Kababgy+Luxor+West+Bank" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>3. Tutankhamon Restaurant</strong> <span class="price-tag">7-14 €/pers</span><br>
-                <span class="rating">★ 4.5</span> | <em>Rooftop acogedor mirando al río Nilo.</em><br>
-                <span class="reserve-tag reserve-no">Sin reserva</span></p>
-                <a href="https://maps.google.com/?q=Tutankhamon+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Tutankhamon+Restaurant+Luxor" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-            </div>
-
-            <div class="card">
-                <h3>📍 Lúxor - East Bank (Día Templos)</h3>
-                
-                <p><strong>1. Sofra Restaurant & Cafe</strong> <span class="price-tag">12-20 €/pers</span><br>
-                <span class="rating">★ 4.5</span> | <em>El local de referencia en Lúxor. Casa señorial.</em><br>
-                <span class="reserve-tag reserve-yes">RECOMENDADO RESERVAR</span></p>
-                <a href="https://maps.google.com/?q=Sofra+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Sofra+Restaurant+Luxor" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>2. Al-Sahaby Lane Restaurant</strong> <span class="price-tag">10-16 €/pers</span><br>
-                <span class="rating">★ 4.6</span> | <em>Azotea sobre el bazar con vistas al templo.</em><br>
-                <span class="reserve-tag reserve-yes">RECOMENDADO RESERVAR</span></p>
-                <a href="https://maps.google.com/?q=Al-Sahaby+Lane+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Al-Sahaby+Lane+Restaurant+Luxor" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>3. 1886 Restaurant (Winter Palace)</strong> <span class="price-tag">45-70 €/pers</span><br>
-                <span class="rating">★ 4.7</span> | <em>Alta cocina colonial histórica. Exige chaqueta.</em><br>
-                <span class="reserve-tag reserve-yes">RESERVA OBLIGATORIA</span></p>
-                <a href="https://maps.google.com/?q=Sofitel+Winter+Palace+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=1886+Restaurant+Sofitel+Winter+Palace+Luxor" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
             </div>
         </div>
 
-        <!-- PESTAÑA 3: PAGOS Y CONVERSOR -->
+        <!-- PESTAÑA 4: PAGOS Y CONVERSOR -->
         <div id="pagos" class="tab-content">
             <div class="converter-box">
                 <h3 style="margin:0; font-size:1rem; color:#d4af37;">🧮 Conversor Euros ↔ Libras Egipcias</h3>
@@ -382,108 +358,35 @@
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <h3>💳 Reglas de Pago Revolut</h3>
-                <ul>
-                    <li><strong>Elegir en datáfono:</strong> Seleccionar siempre <u>EGP (Libra Egipcia)</u>.</li>
-                    <li><strong>Visado Aeropuerto:</strong> $25 USD exactos por persona en efectivo.</li>
-                    <li><strong>Taquillas Monumentos:</strong> Pagar con tarjeta Revolut física obligatoriamente.</li>
-                </ul>
-            </div>
-
-            <div class="card">
-                <h3>💵 Guía Rápida de Propinas</h3>
-                <ul>
-                    <li><strong>Maleteros / Transfer:</strong> 20 - 50 EGP</li>
-                    <li><strong>Limpieza Hotel (por día):</strong> 50 - 100 EGP</li>
-                    <li><strong>Lavabos Públicos:</strong> 10 - 20 EGP</li>
-                    <li><strong>Chofer día completo:</strong> 300 - 400 EGP (el grupo)</li>
-                    <li><strong>Guía privado día completo:</strong> 500 - 800 EGP (el grupo)</li>
-                </ul>
-            </div>
         </div>
 
-        <!-- PESTAÑA 4: REGLAS, CHECKLIST, CONECTIVIDAD Y ENLACES OFICIALES -->
+        <!-- PESTAÑA 5: REGLAS, CHECKLIST, CONECTIVIDAD Y ENLACES -->
         <div id="reglas" class="tab-content">
-            
             <div class="card">
                 <h3>📱 Datos y Conectividad Móvil</h3>
-                
                 <p><strong>1. Google Pixel 7a (Armando)</strong> <span class="badge">eSIM NATIVA</span><br>
-                <em>Admite eSIM virtual.</em><br>
-                • Comprar en España previa salida (App <strong>Airalo</strong> - Plan Giza Mobile 5GB/10GB o <strong>Holafly</strong> Ilimitado).<br>
-                • Escanear el QR en casa y activar la línea al aterrizar en El Cairo.[cite: 3]</p>
-                
-                <a href="https://www.airalo.com/es" target="_blank" class="btn-link btn-web">🌐 Web Airalo</a>
-                <a href="https://holafly.com/es/" target="_blank" class="btn-link btn-web">🌐 Web Holafly</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>2. Realme 9 Pro+ y Poco F6 (Mónica / Armando Jr.)</strong> <span class="badge" style="background:#e11d48;">SIM FÍSICA</span><br>
-                <em>No admiten eSIM.</em><br>
-                • Comprar 2 SIM físicas locales en el mostrador oficial del <strong>Aeropuerto de El Cairo</strong> (Vodafone/Orange) al recoger maletas.[cite: 3]<br>
-                • Precio: 10 - 15 € por SIM (15-30 GB). Requiere presentar pasaporte al comprar.<br>
-                • <em>Alternativa:</em> Conectarse a la Zona Wi-Fi del Pixel 7a de Armando.</p>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>⚠️ Regla DIGI y Llamadas:</strong><br>
-                • Desactivar <u>Itinerancia de Datos de DIGI</u> antes de volar para evitar cargos desorbitados fuera de la UE.<br>
-                • Realizar todas las llamadas (familia, hoteles y choferes) por <strong>WhatsApp</strong> (los hoteles/choferes atienden por WhatsApp).</p>
+                • Comprar en España previa salida (App <strong>Airalo</strong> o <strong>Holafly</strong> Ilimitado).</p>
+                <p><strong>2. Realme 9 Pro+ y Poco F6</strong> <span class="badge" style="background:#e11d48;">SIM FÍSICA</span><br>
+                • Comprar SIMs locales en el <strong>Aeropuerto de El Cairo</strong> (Vodafone/Orange) al llegar.</p>
             </div>
-
-            <div class="card">
-                <h3>📋 CHECKLIST: Gestiones con los Hoteles</h3>
-                <p><strong>1. Con Grensha Pyramids Inn (Giza):</strong></p>
-                <ul>
-                    <li>[x] Confirmada entrada el 10 Sep a medianoche (reserva activa)[cite: 3, 4].</li>
-                    <li>[x] Transfer de llegada contratado ($25 USD) para vuelo IB1903 (22:25 h)[cite: 3, 4].</li>
-                    <li>[ ] Chofer + Guía privado español (Día 11: Pirámides + GEM).</li>
-                    <li>[ ] Chofer + Guía privado español (Día 12: Saqqara + Cairo Histórico).</li>
-                </ul>
-                <a href="https://wa.me/201009193772" class="btn-link btn-whatsapp" target="_blank">WhatsApp Hotel Giza</a>
-
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
-
-                <p><strong>2. Con Blue Nile House (Lúxor):</strong></p>
-                <ul>
-                    <li>[ ] Transfer recogida aeropuerto Lúxor el 13 Sep (15:55 MS066)[cite: 1].</li>
-                    <li>[ ] Reserva 3 plazas Vuelo en Globo Aerostático (15 Sep mañana).</li>
-                    <li>[ ] Chofer + Guía privado español (Día 14: Karnak y Lúxor).</li>
-                    <li>[ ] Chofer + Guía privado español (Día 15: Valle Reyes + Hatshepsut).</li>
-                    <li>[ ] Transfer salida hacia el aeropuerto Lúxor el 17 Sep (11:30 AM)[cite: 2].</li>
-                </ul>
-                <a href="https://wa.me/201002677970" class="btn-link btn-whatsapp" target="_blank">WhatsApp Hotel Lúxor</a>
-            </div>
-
-            <div class="card">
-                <h3>🛡️ Reglas de Oro de Salud e Higiene</h3>
-                <ol>
-                    <li><strong>REPELENTE:</strong> Llevar 2 botes de Relec Extra Forte (75 ml) en spray. Usar en piernas/brazos al atardecer en Lúxor.</li>
-                    <li><strong>AGUA:</strong> Solo embotellada y precintada (incluso para lavar dientes). Sin cubitos de hielo.</li>
-                    <li><strong>COMIDA EN LA CALLE:</strong> Solo cocinada/frita al momento. Evitar ensaladas y fruta cortada de calle.</li>
-                    <li><strong>HIGIENE:</strong> Gel hidroalcohólico antes de manipular pan o cubiertos.</li>
-                </ol>
-            </div>
-
             <div class="card">
                 <h3>🗣️ Palabras Clave en Árabe</h3>
                 <div class="phrase-grid">
                     <div class="phrase-box"><strong>Hola</strong> Salam Alaykum</div>
                     <div class="phrase-box"><strong>Gracias</strong> Shukran</div>
-                    <div class="phrase-box"><strong>Por Favor</strong> Min Fadlak</div>
-                    <div class="phrase-box"><strong>No, gracias</strong> Laa, Shukran</div>
                 </div>
             </div>
         </div>
 
     </div>
 
-    <!-- NAVEGACIÓN INFERIOR -->
+    <!-- NAVEGACIÓN INFERIOR (5 PESTAÑAS) -->
     <nav>
         <button class="active" onclick="switchTab('itinerario', this)">
             <span>📍</span>Ruta
+        </button>
+        <button onclick="switchTab('visual', this)">
+            <span>🎥</span>Guía
         </button>
         <button onclick="switchTab('restaurantes', this)">
             <span>🍽️</span>Comer
@@ -492,7 +395,7 @@
             <span>🧮</span>Pagos
         </button>
         <button onclick="switchTab('reglas', this)">
-            <span>🛡️</span>Info/Ayuda
+            <span>🛡️</span>Info
         </button>
     </nav>
 
