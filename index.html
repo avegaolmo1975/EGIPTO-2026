@@ -91,11 +91,11 @@
             gap: 4px;
             color: white;
             text-decoration: none;
-            padding: 5px 9px;
+            padding: 6px 11px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.78rem;
             font-weight: 600;
-            margin-top: 4px;
+            margin-top: 6px;
             margin-right: 4px;
         }
 
@@ -103,29 +103,17 @@
         .btn-maps { background-color: #ea4335; }
         .btn-web { background-color: #2563eb; }
         .btn-reviews { background-color: #00af87; }
+        .btn-youtube { background-color: #ff0000; }
 
-        /* Estilos para Vídeos e Imágenes */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 8px;
-            margin: 10px 0;
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            border: 0;
-        }
         .visual-img {
             width: 100%;
+            height: 180px;
+            object-fit: cover;
             border-radius: 8px;
             margin: 8px 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
+
         .fun-fact {
             background: #fffbe3;
             border-left: 3px solid #f59e0b;
@@ -252,16 +240,15 @@
             </div>
         </div>
 
-        <!-- PESTAÑA NUEVA: GUÍA VISUAL CON VÍDEOS Y IMÁGENES -->
+        <!-- PESTAÑA GUÍA VISUAL -->
         <div id="visual" class="tab-content">
             
             <div class="card">
-                <h3>🎬 Las Pirámides y la Esfinge</h3>
+                <h3>📐 Las Pirámides de Giza y Esfinge</h3>
+                <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Pirámides Giza">
                 <p>La única Maravilla del Mundo Antiguo que sigue en pie. Caminaremos junto a Keops, Kefrén y Micerino.</p>
                 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/mK3RTh939lE" title="Pirámides de Giza" allowfullscreen></iframe>
-                </div>
+                <a href="https://www.youtube.com/watch?v=mK3RTh939lE" target="_blank" class="btn-link btn-youtube">▶️ Ver Vídeo de las Pirámides</a>
 
                 <div class="fun-fact">
                     💡 <strong>¿Sabías que...?</strong> Las pirámides estaban cubiertas por una capa de piedra caliza blanca pulida que brillaba como un espejo bajo el sol de Egipto.
@@ -270,11 +257,10 @@
 
             <div class="card">
                 <h3>🏛️ El Gran Museo Egipcio (GEM)</h3>
+                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Gran Museo Egipcio">
                 <p>El museo de arqueología más grande del mundo dedicado a una sola civilización. Aquí contemplaremos el tesoro completo de Tutankamón.</p>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/5U9NAnOAt_4" title="Gran Museo Egipcio GEM" allowfullscreen></iframe>
-                </div>
+                <a href="https://www.youtube.com/watch?v=5U9NAnOAt_4" target="_blank" class="btn-link btn-youtube">▶️ Ver Vídeo del Gran Museo</a>
 
                 <div class="fun-fact">
                     💡 <strong>Dato curioso:</strong> La estatua gigante del faraón Ramsés II en el vestíbulo mide 11 metros de altura y pesa 83 toneladas.
@@ -282,21 +268,19 @@
             </div>
 
             <div class="card">
-                <h3>📐 Saqqara y la Pirámide Escalonada</h3>
+                <h3>🏜️ Saqqara y la Pirámide Escalonada</h3>
+                <img src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Saqqara">
                 <p>El primer edificio monumental de piedra construido por la humanidad por el legendario arquitecto Imhotep.</p>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/l2wZ4mN3G30" title="Saqqara Piramide Escalonada" allowfullscreen></iframe>
-                </div>
+                <a href="https://www.youtube.com/watch?v=l2wZ4mN3G30" target="_blank" class="btn-link btn-youtube">▶️ Ver Vídeo de Saqqara</a>
             </div>
 
             <div class="card">
                 <h3>🎈 Vuelo en Globo sobre Lúxor</h3>
+                <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Globo Luxor">
                 <p>Ver amanecer sobre el río Nilo, el Valle de los Reyes y los templos milenarios desde un globo aerostático.</p>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/QJ9qB4fOQIs" title="Globo Luxor" allowfullscreen></iframe>
-                </div>
+                <a href="https://www.youtube.com/watch?v=QJ9qB4fOQIs" target="_blank" class="btn-link btn-youtube">▶️ Ver Vídeo del Vuelo en Globo</a>
 
                 <div class="fun-fact">
                     💡 <strong>Experiencia Top:</strong> Lúxor está considerada la capital mundial de los paseos en globo por sus cielos despejados y sus vistas panorámicas.
@@ -305,43 +289,39 @@
 
             <div class="card">
                 <h3>👑 Tumba de Seti I (Valle de los Reyes)</h3>
+                <img src="https://images.unsplash.com/photo-1608848461950-0fe51dfc41cb?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Valle de los Reyes">
                 <p>La tumba más espectacular y mejor conservada de todo Egipto, con relucientes jeroglíficos a todo color en sus paredes.</p>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/N-0-T3oK9xM" title="Tumba de Seti I" allowfullscreen></iframe>
-                </div>
+                <a href="https://www.youtube.com/watch?v=N-0-T3oK9xM" target="_blank" class="btn-link btn-youtube">▶️ Ver Vídeo de la Tumba</a>
             </div>
 
             <div class="card">
                 <h3>⛵ Paseo en Feluca al Atardecer</h3>
+                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80" class="visual-img" alt="Feluca Nilo">
                 <p>Navegar por el majestuoso río Nilo en un barco de vela tradicional egipcio tal y como lo hacían hace miles de años.</p>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/m06jJgK1Tz8" title="Feluca Nilo Luxor" allowfullscreen></iframe>
-                </div>
+                <a href="https://www.youtube.com/watch?v=m06jJgK1Tz8" target="_blank" class="btn-link btn-youtube">▶️ Ver Vídeo de la Feluca</a>
             </div>
 
         </div>
 
-        <!-- PESTAÑA 3: RESTAURANTES -->
+        <!-- PESTAÑA RESTAURANTES -->
         <div id="restaurantes" class="tab-content">
             <div class="card">
                 <h3>📍 Giza (Día 11)</h3>
                 <p><strong>1. 139 Pavilion (Marriott Mena House)</strong> <span class="price-tag">30-45 €/pers</span><br>
                 <span class="rating">★ 4.6</span> | <em>Vistas únicas a las pirámides.</em></p>
                 <a href="https://maps.google.com/?q=139+Pavilion+Marriott+Mena+House+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=139+Pavilion+Marriott+Mena+House+Giza" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
             </div>
             <div class="card">
                 <h3>📍 El Cairo Centro / Bazar (Día 12)</h3>
                 <p><strong>1. Naguib Mahfouz Cafe</strong> <span class="price-tag">15-25 €/pers</span><br>
                 <span class="rating">★ 4.4</span> | <em>En pleno centro del bazar Khan.</em></p>
                 <a href="https://maps.google.com/?q=Naguib+Mahfouz+Cafe+Cairo" target="_blank" class="btn-link btn-maps">📍 Maps</a>
-                <a href="https://www.tripadvisor.es/Search?q=Naguib+Mahfouz+Cafe+Cairo" target="_blank" class="btn-link btn-reviews">🟢 TripAdvisor</a>
             </div>
         </div>
 
-        <!-- PESTAÑA 4: PAGOS Y CONVERSOR -->
+        <!-- PESTAÑA PAGOS -->
         <div id="pagos" class="tab-content">
             <div class="converter-box">
                 <h3 style="margin:0; font-size:1rem; color:#d4af37;">🧮 Conversor Euros ↔ Libras Egipcias</h3>
@@ -360,7 +340,7 @@
             </div>
         </div>
 
-        <!-- PESTAÑA 5: REGLAS, CHECKLIST, CONECTIVIDAD Y ENLACES -->
+        <!-- PESTAÑA REGLAS -->
         <div id="reglas" class="tab-content">
             <div class="card">
                 <h3>📱 Datos y Conectividad Móvil</h3>
@@ -369,18 +349,11 @@
                 <p><strong>2. Realme 9 Pro+ y Poco F6</strong> <span class="badge" style="background:#e11d48;">SIM FÍSICA</span><br>
                 • Comprar SIMs locales en el <strong>Aeropuerto de El Cairo</strong> (Vodafone/Orange) al llegar.</p>
             </div>
-            <div class="card">
-                <h3>🗣️ Palabras Clave en Árabe</h3>
-                <div class="phrase-grid">
-                    <div class="phrase-box"><strong>Hola</strong> Salam Alaykum</div>
-                    <div class="phrase-box"><strong>Gracias</strong> Shukran</div>
-                </div>
-            </div>
         </div>
 
     </div>
 
-    <!-- NAVEGACIÓN INFERIOR (5 PESTAÑAS) -->
+    <!-- NAVEGACIÓN INFERIOR -->
     <nav>
         <button class="active" onclick="switchTab('itinerario', this)">
             <span>📍</span>Ruta
