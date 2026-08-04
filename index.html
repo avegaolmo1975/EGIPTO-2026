@@ -93,16 +93,17 @@
             text-decoration: none;
             padding: 6px 11px;
             border-radius: 6px;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             font-weight: 600;
             margin-top: 6px;
-            margin-right: 4px;
+            margin-right: 2px;
             cursor: pointer;
             border: none;
         }
 
         .btn-whatsapp { background-color: #25D366; }
         .btn-translate { background-color: #0284c7; }
+        .btn-translate-es { background-color: #d97706; }
         .btn-maps { background-color: #ea4335; }
         .btn-web { background-color: #2563eb; }
         .btn-youtube { background-color: #ff0000; }
@@ -170,6 +171,13 @@
             font-family: inherit;
             box-sizing: border-box;
             resize: vertical;
+            margin-top: 6px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
             margin-top: 6px;
         }
 
@@ -490,9 +498,10 @@ Queremos contratar adicionalmente chófer privado con vehículo AC y guía egipt
 
 Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Gracias!</textarea>
                 
-                <div>
-                    <button class="btn-link btn-translate" onclick="translateMsg('msgGiza')">🌐 Traducir a Inglés</button>
-                    <button class="btn-link btn-whatsapp" onclick="sendWhatsApp('msgGiza', '201009193772')">📲 Enviar a Hotel Giza</button>
+                <div class="btn-group">
+                    <button class="btn-link btn-translate" onclick="translateMsg('msgGiza', 'en')">🇬🇧 Traducir a Inglés</button>
+                    <button class="btn-link btn-translate-es" onclick="translateMsg('msgGiza', 'es')">🇪🇸 Traducir a Español</button>
+                    <button class="btn-link btn-whatsapp" onclick="sendWhatsApp('msgGiza', '201009193772')">📲 WhatsApp Giza</button>
                 </div>
 
                 <hr style="border:0; border-top:1px dashed #eee; margin:15px 0;">
@@ -509,9 +518,10 @@ Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Gracias
 
 Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas gracias!</textarea>
                 
-                <div>
-                    <button class="btn-link btn-translate" onclick="translateMsg('msgLuxor')">🌐 Traducir a Inglés</button>
-                    <button class="btn-link btn-whatsapp" onclick="sendWhatsApp('msgLuxor', '201002677970')">📲 Enviar a Hotel Lúxor</button>
+                <div class="btn-group">
+                    <button class="btn-link btn-translate" onclick="translateMsg('msgLuxor', 'en')">🇬🇧 Traducir a Inglés</button>
+                    <button class="btn-link btn-translate-es" onclick="translateMsg('msgLuxor', 'es')">🇪🇸 Traducir a Español</button>
+                    <button class="btn-link btn-whatsapp" onclick="sendWhatsApp('msgLuxor', '201002677970')">📲 WhatsApp Lúxor</button>
                 </div>
             </div>
 
@@ -573,15 +583,16 @@ Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas 
             window.scrollTo(0, 0);
         }
 
-        // Lógica de traducción automática instantánea
-        async function translateMsg(elementId) {
+        // Lógica de traducción automática instantánea (Soporta EN y ES)
+        async function translateMsg(elementId, targetLang) {
             const textarea = document.getElementById(elementId);
             const text = textarea.value;
             if (!text.trim()) return;
 
+            const sourceLang = targetLang === 'en' ? 'es' : 'en';
             textarea.value = "Traduciendo mensaje...";
             try {
-                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=es&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=${sourceLang}&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`);
                 const data = await res.json();
                 let translatedText = "";
                 data[0].forEach(item => { if (item[0]) translatedText += item[0]; });
