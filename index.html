@@ -131,7 +131,6 @@
         .bg-tumba { background: linear-gradient(135deg, #9333ea, #4c1d95); }
         .bg-feluca { background: linear-gradient(135deg, #059669, #064e3b); }
 
-        /* Conversor */
         .converter-box {
             background: #2d3748;
             color: white;
@@ -159,7 +158,6 @@
         .budget-table td { border-bottom: 1px solid #eee; padding: 8px; }
         .budget-table tr:nth-child(even) { background-color: #fafafa; }
 
-        /* Cajas editables */
         .editable-msg {
             width: 100%;
             height: 150px;
@@ -181,7 +179,15 @@
             margin-top: 6px;
         }
 
-        /* Navegación */
+        .service-time {
+            background: #f1f5f9;
+            border-left: 3px solid var(--accent);
+            padding: 6px 8px;
+            font-size: 0.78rem;
+            margin: 6px 0;
+            border-radius: 4px;
+        }
+
         nav {
             position: fixed;
             bottom: 0; left: 0; right: 0;
@@ -225,11 +231,19 @@
 
             <div class="card">
                 <h3><span class="badge">11 SEP</span> Giza + Gran Museo (GEM)</h3>
-                <p><strong>08:00 - 11:30:</strong> Necrópolis de Giza (Pirámides y Esfinge) con Guía Privado[cite: 1].</p>
-                <a href="https://maps.google.com/?q=Giza+Pyramids+Ticket+Office" target="_blank" class="btn-link btn-maps">📍 Acceso Entrada Norte</a>
                 
-                <p><strong>12:00 - 13:45:</strong> Comida tradicional en <em>Andrea El Mariouteya</em>.</p>
-                <a href="https://maps.google.com/?q=Andrea+El+Mariouteya+Giza" target="_blank" class="btn-link btn-maps">📍 Andrea Rest.</a>
+                <div class="service-time">
+                    <strong>⏱️ Chófer Privado:</strong> Inicio 08:00 AM (Hotel Giza) | Fin 21:30 PM (Tras traslado al restaurante de la cena).
+                </div>
+
+                <p><strong>08:00 - 11:30:</strong> Necrópolis de Giza (Pirámides y Esfinge) con Guía Privado[cite: 1]. Salida habitual por la Esfinge.</p>
+                <a href="https://maps.google.com/?q=Giza+Pyramids+Ticket+Office" target="_blank" class="btn-link btn-maps">📍 Acceso Entrada Norte</a>
+                <a href="https://maps.google.com/?q=Great+Sphinx+Exit+Gate+Giza" target="_blank" class="btn-link btn-maps">📍 Salida Esfinge</a>
+                
+                <p><strong>12:00 - 13:45:</strong> Comida en <em>Pyramids Restaurant</em> (Elegido). [Alternativas: Khufu's / 9 Pyramids Lounge].</p>
+                <a href="https://maps.google.com/?q=Pyramids+Restaurant+Al+Haram+Giza" target="_blank" class="btn-link btn-maps">📍 Rest. Pyramids</a>
+                <a href="https://maps.google.com/?q=Khufu's+Restaurant+Giza" target="_blank" class="btn-link btn-web">📍 Khufu's</a>
+                <a href="https://maps.google.com/?q=9+Pyramids+Lounge+Giza" target="_blank" class="btn-link btn-web">📍 9 Pyramids Lounge</a>
 
                 <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
 
@@ -238,13 +252,18 @@
                 <a href="https://tickets.gem.eg/" target="_blank" class="btn-link btn-web">🌐 Web Oficial GEM</a>
                 <a href="https://maps.google.com/?q=Grand+Egyptian+Museum" target="_blank" class="btn-link btn-maps">📍 Museo GEM</a>
 
-                <p><strong>20:00:</strong> Cena cercana al hotel en <em>First Pyramid Restaurant</em>[cite: 1].</p>
+                <p><strong>20:00:</strong> Cena en <em>First Pyramid Restaurant</em>[cite: 1]. El chófer os deja en la puerta. <em>Nota: Para volver al hotel, coger Uber/Taxi o pedir transporte al restaurante para no caminar de noche.</em></p>
                 <a href="https://maps.google.com/?q=First+Pyramid+Restaurant+Giza" target="_blank" class="btn-link btn-maps">📍 Rest. Cena</a>
-                <a href="https://www.google.com/maps/dir/Grensha+Pyramids+Inn/Giza+Pyramids+Ticket+Office/Andrea+El+Mariouteya+Giza/Grand+Egyptian+Museum/First+Pyramid+Restaurant/Grensha+Pyramids+Inn" target="_blank" class="btn-link btn-maps">🗺️ Ruta Día Completo</a>
+                <a href="https://www.google.com/maps/dir/Grensha+Pyramids+Inn/Giza+Pyramids+Ticket+Office/Pyramids+Restaurant+Al+Haram+Giza/Grand+Egyptian+Museum/First+Pyramid+Restaurant/Grensha+Pyramids+Inn" target="_blank" class="btn-link btn-maps">🗺️ Ruta Día Completo</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">12 SEP</span> Saqqara + Memphis + Cairo Histórico</h3>
+                
+                <div class="service-time">
+                    <strong>⏱️ Chófer Privado:</strong> Inicio 08:30 AM (Hotel Giza) | Fin 21:00 PM (Devolución al hotel tras Khan el-Khalili)[cite: 1].
+                </div>
+
                 <p><strong>08:30 - 11:30:</strong> Saqqara (Pirámide Escalonada Zoser) + Museo al aire libre de Memphis[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Saqqara+Step+Pyramid" target="_blank" class="btn-link btn-maps">📍 Saqqara</a>
                 <a href="https://maps.google.com/?q=Mit+Rahina+Museum" target="_blank" class="btn-link btn-maps">📍 Memphis</a>
@@ -266,6 +285,11 @@
 
             <div class="card">
                 <h3><span class="badge">13 SEP</span> Barrio Copto + Vuelo a Lúxor</h3>
+                
+                <div class="service-time">
+                    <strong>⏱️ Chófer Cairo:</strong> Inicio 09:00 AM (Hotel Giza) | Fin 12:30 PM (Terminal 3 Aeropuerto Cairo)[cite: 1].
+                </div>
+
                 <p><strong>09:00:</strong> Salida del hotel con maletas en el maletero del coche privado[cite: 1].</p>
                 <p><strong>09:30 - 11:30:</strong> Paseo peatonal por el Barrio Copto (Iglesia Colgante, San Sergio, Sinagoga Ben Ezra)[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Coptic+Cairo" target="_blank" class="btn-link btn-maps">📍 Barrio Copto</a>
@@ -274,15 +298,20 @@
                 <p><strong>14:55 - 15:55:</strong> Vuelo EgyptAir MS066 CAI -> LXR[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Cairo+International+Airport+Terminal+3" target="_blank" class="btn-link btn-maps">📍 Terminal 3 CAI</a>
 
-                <p><strong>16:30:</strong> Transfer al hotel <em>Blue Nile House</em> (West Bank)[cite: 1].</p>
+                <p><strong>16:30:</strong> Transfer de llegada al hotel <em>Blue Nile House</em> (West Bank)[cite: 1].</p>
                 <p><strong>19:30:</strong> Cena junto al Nilo en <em>Nile Valley Restaurant</em>[cite: 1].</p>
-                <a href="https://maps.google.com/?q=Blue+Nile+House+Luxor" target="_blank" class="btn-link btn-maps">📍 Blue Nile House</a>
+                <a href="https://maps.app.goo.gl/UgYdCBh7tkU4QgLd7" target="_blank" class="btn-link btn-maps">📍 Blue Nile House</a>
                 <a href="https://maps.google.com/?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Nile Valley Rest.</a>
                 <a href="https://www.google.com/maps/dir/Grensha+Pyramids+Inn/Coptic+Cairo/Cairo+International+Airport" target="_blank" class="btn-link btn-maps">🗺️ Ruta Mañana</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">14 SEP</span> Templos de Lúxor (East Bank)</h3>
+                
+                <div class="service-time">
+                    <strong>⏱️ Chófer Privado:</strong> Inicio 08:30 AM (Hotel Blue Nile) | Fin 19:00 PM (En Templo de Lúxor para cruzar en ferry)[cite: 1].
+                </div>
+
                 <p><strong>08:30 - 11:30:</strong> Complejo Templo de Karnak (Guía Privado Español)[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Karnak+Temple+Visitor+Center" target="_blank" class="btn-link btn-maps">📍 Karnak Visitor Center</a>
 
@@ -297,12 +326,17 @@
 
                 <p><strong>19:30:</strong> Ducha en hotel y cena en <em>El-Kababgy West Bank</em>[cite: 1].</p>
                 <a href="https://maps.google.com/?q=El+Kababgy+Luxor+West+Bank" target="_blank" class="btn-link btn-maps">📍 Rest. El-Kababgy</a>
-                <a href="https://www.google.com/maps/dir/Luxor+Temple+Entrance/Luxor+Local+Ferry+Dock/West+Bank+Ferry+Dock+Luxor/Blue+Nile+House" target="_blank" class="btn-link btn-maps">🗺️ Ruta a Pie y Ferry</a>
+                <a href="https://www.google.com/maps/dir/Luxor+Temple+Entrance/Luxor+Local+Ferry+Dock/West+Bank+Ferry+Dock+Luxor/Blue+Nile+House,+Al+Qarnah,+Luxor+Governorate+1345108" target="_blank" class="btn-link btn-maps">🗺️ Ruta a Pie, Ferry y Hotel</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">15 SEP</span> 🎈 Globo + Valle de los Reyes</h3>
-                <p><strong>04:30 AM:</strong> Recogida en hotel para Vuelo en Globo al amanecer[cite: 1].</p>
+                
+                <div class="service-time">
+                    <strong>⏱️ Chófer Privado:</strong> Inicio 07:30 AM (Encuentro en punto aterrizaje globo/hotel) | Fin 14:30 PM (Llegada al hotel tras almuerzo).
+                </div>
+
+                <p><strong>04:30 AM:</strong> Recogida en hotel por la empresa del globo para Vuelo al amanecer[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Luxor+Hot+Air+Balloon+Take-off+Area" target="_blank" class="btn-link btn-maps">📍 Punto Despegue Globos</a>
 
                 <p><strong>07:30 - 10:00:</strong> Valle de los Reyes (3 tumbas generales + Tumba de Seti I KV17)[cite: 1].</p>
@@ -319,26 +353,39 @@
 
                 <p><strong>Tarde:</strong> Relax en piscina del hotel y paseo opcional por la Corniche del West Bank[cite: 1].</p>
                 <p><strong>19:30:</strong> Cena en <em>Nile Valley Restaurant</em>[cite: 1].</p>
-                <a href="https://www.google.com/maps/dir/Blue+Nile+House/Valley+of+the+Kings+Visitor+Center/Deir+el-Bahari+Hatshepsut+Temple/Colossi+of+Memnon/Blue+Nile+House" target="_blank" class="btn-link btn-maps">🗺️ Ruta Mañana</a>
+                <a href="https://maps.google.com/?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Rest. Nile Valley</a>
+                <a href="https://maps.app.goo.gl/BE5aEQYvckPqKESk7" target="_blank" class="btn-link btn-maps">🗺️ Ruta Mañana Corregida</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">16 SEP</span> Medinet Habu + Feluca</h3>
+                
+                <div class="service-time">
+                    <strong>⏱️ Chófer Privado:</strong> Inicio 09:00 AM (Hotel Blue Nile) | Fin 14:30 PM (Regreso al hotel tras almuerzo)[cite: 1].
+                </div>
+
                 <p><strong>09:00 - 11:00:</strong> Templo de Medinet Habu (Ramsés III)[cite: 1]. [Opcional: Valle de los Nobles].</p>
                 <a href="https://maps.google.com/?q=Medinet+Habu" target="_blank" class="btn-link btn-maps">📍 Medinet Habu</a>
 
-                <p><strong>12:30:</strong> Almuerzo en <em>El-Kababgy West Bank</em>[cite: 1].</p>
+                <p><strong>12:30:</strong> Almuerzo en <em>Sunflower Restaurant West Bank</em> (Elegido). Chófer os lleva de vuelta al hotel a las 14:30h.</p>
+                <a href="https://maps.google.com/?q=Sunflower+Restaurant+Luxor+West+Bank" target="_blank" class="btn-link btn-maps">📍 Rest. Sunflower</a>
+
                 <p><strong>14:30 - 16:30:</strong> Piscina y descanso en el hotel[cite: 1].</p>
                 <p><strong>17:00 - 18:30:</strong> Paseo Privado en Feluca a vela al atardecer (embarque a pie junto al hotel)[cite: 1].</p>
                 <a href="https://maps.google.com/?q=West+Bank+Ferry+Dock+Luxor" target="_blank" class="btn-link btn-maps">📍 Embarcadero Feluca</a>
 
-                <p><strong>19:30:</strong> Cena en <em>Marsam Restaurant</em> (West Bank)[cite: 1].</p>
-                <a href="https://maps.google.com/?q=Marsam+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Rest. Marsam</a>
-                <a href="https://www.google.com/maps/dir/Blue+Nile+House/West+Bank+Ferry+Dock+Luxor/Marsam+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">🗺️ Ruta a Pie Tarde</a>
+                <p><strong>19:30:</strong> Cena en <em>Tutankhamon Restaurant</em> (Elegido, junto al embarcadero)[cite: 1]. <em>Nota: Para volver al hotel, dar un paseo de 15 min o taxi de 2 min.</em></p>
+                <a href="https://maps.google.com/?q=Tutankhamon+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Rest. Tutankhamon</a>
+                <a href="https://www.google.com/maps/dir/Blue+Nile+House,+Al+Qarnah,+Luxor+Governorate+1345108/Medinet+Habu/Sunflower+Restaurant+Luxor/Blue+Nile+House,+Al+Qarnah,+Luxor+Governorate+1345108" target="_blank" class="btn-link btn-maps">🗺️ Ruta Mañana Coche</a>
             </div>
 
             <div class="card">
                 <h3><span class="badge">17 SEP</span> Regreso vía Milán</h3>
+                
+                <div class="service-time">
+                    <strong>⏱️ Transfer Salida:</strong> Inicio 11:30 AM (Hotel Blue Nile) | Fin 12:10 PM (Aeropuerto Lúxor LXR)[cite: 1].
+                </div>
+
                 <p><strong>11:30 AM:</strong> Transfer privado desde el Blue Nile House al Aeropuerto de Lúxor (LXR)[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Luxor+International+Airport" target="_blank" class="btn-link btn-maps">📍 Aeropuerto Lúxor</a>
 
@@ -350,7 +397,7 @@
             </div>
         </div>
 
-        <!-- PESTAÑA 2: GUÍA VISUAL COMPLETA -->
+        <!-- PESTAÑA 2: GUÍA VISUAL -->
         <div id="visual" class="tab-content">
             <div class="card">
                 <h3>📐 Pirámides de Giza y Esfinge</h3>
@@ -393,14 +440,20 @@
         <div id="restaurantes" class="tab-content">
             <div class="card">
                 <h3>📍 Giza (Día 11)</h3>
-                <p><strong>1. Andrea El Mariouteya</strong> <span class="price-tag">12-20 €/pers</span><br>
-                <span class="rating">★ 4.5</span> | <em>Especialidad en carnes/pollo a la parrilla e higiene top.</em></p>
-                <a href="https://maps.google.com/?q=Andrea+El+Mariouteya+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <p><strong>1. Pyramids Restaurant (Elegido)</strong> <span class="price-tag">12-20 €/pers</span><br>
+                <span class="rating">★ 4.5</span> | <em>En la avenida principal entre Pirámides y GEM. Excelente comida.</em></p>
+                <a href="https://maps.google.com/?q=Pyramids+Restaurant+Al+Haram+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
 
                 <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
 
-                <p><strong>2. First Pyramid Restaurant</strong> <span class="price-tag">10-18 €/pers</span><br>
-                <span class="rating">★ 4.4</span> | <em>Muy cercano al Grensha Inn. Excelente comida local.</em></p>
+                <p><strong>2. Khufu's Restaurant (Alternativa Top)</strong> <span class="price-tag">25-40 €/pers</span><br>
+                <span class="rating">★ 4.8</span> | <em>Dentro de la meseta de Giza con vistas alucinantes.</em></p>
+                <a href="https://maps.google.com/?q=Khufu's+Restaurant+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>3. First Pyramid Restaurant (Cena)</strong> <span class="price-tag">10-18 €/pers</span><br>
+                <span class="rating">★ 4.4</span> | <em>Muy cercano al Grensha Inn. Ir y volver en coche/taxi.</em>[cite: 1]</p>
                 <a href="https://maps.google.com/?q=First+Pyramid+Restaurant+Giza" target="_blank" class="btn-link btn-maps">📍 Maps</a>
             </div>
 
@@ -419,21 +472,27 @@
 
             <div class="card">
                 <h3>📍 Lúxor - West Bank</h3>
-                <p><strong>1. Nile Valley Restaurant</strong> <span class="price-tag">8-15 €/pers</span><br>
-                <span class="rating">★ 4.6</span> | <em>Terraza junto al Nilo. Comida segura y acogedora.</em>[cite: 1]</p>
-                <a href="https://maps.google.com/?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <p><strong>1. Sunflower Restaurant (Almuerzo Día 16)</strong> <span class="price-tag">8-15 €/pers</span><br>
+                <span class="rating">★ 4.6</span> | <em>Comida casera egipcia excelente tras Medinet Habu.</em></p>
+                <a href="https://maps.google.com/?q=Sunflower+Restaurant+Luxor+West+Bank" target="_blank" class="btn-link btn-maps">📍 Maps</a>
 
                 <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
 
-                <p><strong>2. El-Kababgy West Bank</strong> <span class="price-tag">10-18 €/pers</span><br>
+                <p><strong>2. Tutankhamon Restaurant (Cena Día 16)</strong> <span class="price-tag">10-18 €/pers</span><br>
+                <span class="rating">★ 4.5</span> | <em>Azotea panorámica junto al embarcadero tras la feluca.</em>[cite: 1]</p>
+                <a href="https://maps.google.com/?q=Tutankhamon+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+
+                <p><strong>3. El-Kababgy West Bank</strong> <span class="price-tag">10-18 €/pers</span><br>
                 <span class="rating">★ 4.4</span> | <em>Parrilladas tradicionales de carne y pollo asado.</em>[cite: 1]</p>
                 <a href="https://maps.google.com/?q=El+Kababgy+Luxor+West+Bank" target="_blank" class="btn-link btn-maps">📍 Maps</a>
 
                 <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
 
-                <p><strong>3. Marsam Restaurant</strong> <span class="price-tag">12-22 €/pers</span><br>
-                <span class="rating">★ 4.7</span> | <em>Hermoso patio ajardinado en el West Bank.</em></p>
-                <a href="https://maps.google.com/?q=Marsam+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
+                <p><strong>4. Nile Valley Restaurant</strong> <span class="price-tag">8-15 €/pers</span><br>
+                <span class="rating">★ 4.6</span> | <em>Terraza junto al Nilo a 2 min a pie del Blue Nile.</em>[cite: 1]</p>
+                <a href="https://maps.google.com/?q=Nile+Valley+Restaurant+Luxor" target="_blank" class="btn-link btn-maps">📍 Maps</a>
             </div>
 
             <div class="card">
@@ -492,9 +551,9 @@
                 <textarea id="msgGiza" class="editable-msg">Hola, somos la familia Vega (Reserva Booking N.º 6242.686.796). Os recordamos que ya tenemos confirmado el transfer de llegada al aeropuerto del jueves 10 de septiembre (Vuelo Iberia IB1903, llegada 22:25h, 3 adultos).
 
 Queremos contratar adicionalmente chófer privado con vehículo AC y guía egiptólogo en español:
-- Viernes 11 Sep (Día completo): Mañana: Necrópolis de Giza (Pirámides/Esfinge). Tarde: Gran Museo Egipcio (GEM).
-- Sábado 12 Sep (Día completo): Mañana: Saqqara (Zoser) y Memphis. Tarde: Ciudadela, Mezquita Alabastro y Bazar Khan el-Khalili (con cena allí y regreso nocturno).
-- Domingo 13 Sep (Mañana - Solo chófer/vehículo AC): 09:00h Salida hotel con maletas -> 09:30-11:30h Espera en Barrio Copto -> 12:30h Llegada Aeropuerto El Cairo T3 (Vuelo EgyptAir MS066 14:55h).
+- Viernes 11 Sep (08:00 a 21:30h): Mañana: Necrópolis de Giza (Pirámides/Esfinge). Tarde: Gran Museo Egipcio (GEM). Traslado al restaurante de la cena.
+- Sábado 12 Sep (08:30 a 21:00h): Mañana: Saqqara (Zoser) y Memphis. Tarde: Ciudadela, Mezquita Alabastro y Bazar Khan el-Khalili (con cena allí y regreso nocturno).
+- Domingo 13 Sep (09:00 a 12:30h - Solo chófer/vehículo AC): 09:00h Salida hotel con maletas -> 09:30-11:30h Espera en Barrio Copto -> 12:30h Llegada Aeropuerto El Cairo T3 (Vuelo EgyptAir MS066 14:55h).
 
 Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Gracias!</textarea>
                 
@@ -511,10 +570,10 @@ Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Gracias
                 <textarea id="msgLuxor" class="editable-msg">Hola, somos la familia Vega (Reserva Booking N.º 5525.583.178, del 13 al 17 de septiembre). Queremos organizar los traslados y visitas con vosotros:
 
 1. Domingo 13 Sep (Tarde): Transfer de recogida en Aeropuerto de Lúxor (Vuelo EgyptAir MS066, llegada 15:55h).
-2. Lunes 14 Sep (Día completo): Chófer y guía en español. Mañana: Karnak. Tarde: Templo de Lúxor al atardecer (el servicio termina a las 19:00h en el templo, volvemos en ferry).
-3. Martes 15 Sep (Mañana): Vuelo en Globo al amanecer (3 pers) + Chófer y guía en español para Valle de los Reyes (Tumba Seti I KV17), Hatshepsut y Memnón.
-4. Miércoles 16 Sep (Solo Mañana): Chófer/taxi por la mañana para Medinet Habu y traslado al restaurante. El servicio finaliza tras el almuerzo.
-5. Jueves 17 Sep (Mediodía): Transfer salida al Aeropuerto de Lúxor a las 11:30 AM (Vuelo easyJet U23990 14:10h).
+2. Lunes 14 Sep (08:30 a 19:00h): Chófer y guía en español. Mañana: Karnak. Tarde: Templo de Lúxor al atardecer (el servicio termina a las 19:00h en el templo, volvemos en ferry).
+3. Martes 15 Sep (07:30 a 14:30h): Vuelo en Globo al amanecer (3 pers) + Chófer y guía en español para Valle de los Reyes (Tumba Seti I KV17), Hatshepsut y Memnón.
+4. Miércoles 16 Sep (09:00 a 14:30h): Chófer/taxi por la mañana para Medinet Habu y traslado al restaurante. El servicio finaliza tras el almuerzo llevándonos al hotel.
+5. Jueves 17 Sep (11:30 a 12:10h): Transfer salida al Aeropuerto de Lúxor a las 11:30 AM (Vuelo easyJet U23990 14:10h).
 
 Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas gracias!</textarea>
                 
@@ -583,7 +642,6 @@ Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas 
             window.scrollTo(0, 0);
         }
 
-        // Lógica de traducción automática instantánea (Soporta EN y ES)
         async function translateMsg(elementId, targetLang) {
             const textarea = document.getElementById(elementId);
             const text = textarea.value;
@@ -603,7 +661,6 @@ Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas 
             }
         }
 
-        // Enviar por WhatsApp
         function sendWhatsApp(elementId, phone) {
             const text = document.getElementById(elementId).value;
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
