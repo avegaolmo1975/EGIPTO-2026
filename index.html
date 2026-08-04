@@ -153,9 +153,9 @@
         .phrase-box { background: #f0ede6; padding: 8px; border-radius: 6px; font-size: 0.8rem; }
         .phrase-box strong { color: var(--accent); display: block; }
         
-        .budget-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 10px; }
-        .budget-table th { background-color: var(--primary-dark); color: white; padding: 8px; text-align: left; }
-        .budget-table td { border-bottom: 1px solid #eee; padding: 8px; }
+        .budget-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; margin-top: 10px; }
+        .budget-table th { background-color: var(--primary-dark); color: white; padding: 6px; text-align: left; }
+        .budget-table td { border-bottom: 1px solid #eee; padding: 6px; }
         .budget-table tr:nth-child(even) { background-color: #fafafa; }
 
         .editable-msg {
@@ -200,13 +200,13 @@
         }
 
         nav button {
-            background: none; border: none; padding: 8px 3px; flex: 1;
-            font-size: 0.65rem; color: #666; display: flex;
+            background: none; border: none; padding: 6px 1px; flex: 1;
+            font-size: 0.6rem; color: #666; display: flex;
             flex-direction: column; align-items: center; cursor: pointer;
         }
 
         nav button.active { color: var(--primary-dark); font-weight: bold; }
-        nav button span { font-size: 1.1rem; margin-bottom: 2px; }
+        nav button span { font-size: 1rem; margin-bottom: 2px; }
     </style>
 </head>
 <body>
@@ -503,7 +503,48 @@
             </div>
         </div>
 
-        <!-- PESTAÑA 4: PAGOS Y CONVERSOR -->
+        <!-- PESTAÑA 4: NUEVA PESTAÑA ENTRADAS Y MONUMENTOS -->
+        <div id="entradas" class="tab-content">
+            <div class="card">
+                <h3>🎫 Guía Rápida de Compra</h3>
+                <ul>
+                    <li><strong>Online Previa:</strong> Solo el <em>Gran Museo Egipcio (GEM)</em>[cite: 1].</li>
+                    <li><strong>In Situ (Taquilla):</strong> Todo lo demás se paga con tarjeta (Revolut/Visa) en la taquilla[cite: 1].</li>
+                    <li><strong>Vía Hotel:</strong> Vuelo en Globo en Lúxor[cite: 1].</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📍 El Cairo y Giza (Precios 3 Pers)</h3>
+                <table class="budget-table">
+                    <tr><th>Monumento</th><th>Método</th><th>Precio/Pers</th><th>Total 3p (€)</th></tr>
+                    <tr><td>Pirámides Giza (Recinto)</td><td>💳 In Situ</td><td>~540 EGP</td><td>~31 €[cite: 1]</td></tr>
+                    <tr><td>Gran Museo Egipcio (GEM)</td><td>🌐 Online Previa</td><td>~1.200 EGP</td><td>~68 €[cite: 1]</td></tr>
+                    <tr><td>Saqqara (Zoser)</td><td>💳 In Situ</td><td>~450 EGP</td><td>~26 €[cite: 1]</td></tr>
+                    <tr><td>Museo Memphis</td><td>💳 In Situ</td><td>~150 EGP</td><td>~8,50 €[cite: 1]</td></tr>
+                    <tr><td>Ciudadela de Saladino</td><td>💳 In Situ</td><td>~450 EGP</td><td>~26 €[cite: 1]</td></tr>
+                    <tr><td>Barrio Copto</td><td>🆓 Gratuito</td><td>0 EGP</td><td>0 €</td></tr>
+                </table>
+                <a href="https://tickets.gem.eg/" target="_blank" class="btn-link btn-web">🌐 Web Oficial GEM</a>
+            </div>
+
+            <div class="card">
+                <h3>📍 Lúxor (Precios 3 Pers)</h3>
+                <table class="budget-table">
+                    <tr><th>Monumento</th><th>Método</th><th>Precio/Pers</th><th>Total 3p (€)</th></tr>
+                    <tr><td>Templo de Karnak</td><td>💳 In Situ</td><td>~450 EGP</td><td>~26 €[cite: 1]</td></tr>
+                    <tr><td>Templo de Lúxor</td><td>💳 In Situ</td><td>~400 EGP</td><td>~23 €[cite: 1]</td></tr>
+                    <tr><td>Valle Reyes (3 Tumbas)</td><td>💳 In Situ</td><td>~600 EGP</td><td>~34 €[cite: 1]</td></tr>
+                    <tr><td>Tumba Seti I (KV17)</td><td>💳 In Situ</td><td>~2.000 EGP</td><td>~113 €[cite: 1]</td></tr>
+                    <tr><td>Templo Hatshepsut</td><td>💳 In Situ</td><td>~360 EGP</td><td>~20,50 €[cite: 1]</td></tr>
+                    <tr><td>Colosos de Memnón</td><td>🆓 Gratuito</td><td>0 EGP</td><td>0 €[cite: 1]</td></tr>
+                    <tr><td>Medinet Habu</td><td>💳 In Situ</td><td>~300 EGP</td><td>~17 €[cite: 1]</td></tr>
+                    <tr><td>Vuelo en Globo</td><td>🏨 Vía Hotel</td><td>~$40-50 USD</td><td>~129 €[cite: 1]</td></tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 5: PAGOS Y CONVERSOR -->
         <div id="pagos" class="tab-content">
             <div class="converter-box">
                 <h3 style="margin:0; font-size:1rem; color:#d4af37;">🧮 Conversor Euros ↔ Libras</h3>
@@ -541,7 +582,7 @@
             </div>
         </div>
 
-        <!-- PESTAÑA 5: MENSAJES EDITABLES CON TRADUCTOR Y WHATSAPP -->
+        <!-- PESTAÑA 6: MENSAJES EDITABLES CON TRADUCTOR Y WHATSAPP -->
         <div id="reglas" class="tab-content">
             <div class="card">
                 <h3>📱 Plantillas Editables para WhatsApp</h3>
@@ -613,11 +654,12 @@ Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas 
 
     </div>
 
-    <!-- NAVEGACIÓN INFERIOR -->
+    <!-- NAVEGACIÓN INFERIOR (6 BOTONES) -->
     <nav>
         <button class="active" onclick="switchTab('itinerario', this)"><span>📍</span>Ruta</button>
         <button onclick="switchTab('visual', this)"><span>🎥</span>Guía</button>
         <button onclick="switchTab('restaurantes', this)"><span>🍽️</span>Comer</button>
+        <button onclick="switchTab('entradas', this)"><span>🎫</span>Tickets</button>
         <button onclick="switchTab('pagos', this)"><span>🧮</span>Pagos</button>
         <button onclick="switchTab('reglas', this)"><span>🛡️</span>Ayuda</button>
     </nav>
