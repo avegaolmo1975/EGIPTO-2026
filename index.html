@@ -97,12 +97,14 @@
             font-weight: 600;
             margin-top: 6px;
             margin-right: 4px;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-whatsapp { background-color: #25D366; }
+        .btn-translate { background-color: #0284c7; }
         .btn-maps { background-color: #ea4335; }
         .btn-web { background-color: #2563eb; }
-        .btn-reviews { background-color: #00af87; }
         .btn-youtube { background-color: #ff0000; }
 
         .visual-box {
@@ -128,15 +130,6 @@
         .bg-tumba { background: linear-gradient(135deg, #9333ea, #4c1d95); }
         .bg-feluca { background: linear-gradient(135deg, #059669, #064e3b); }
 
-        .fun-fact {
-            background: #fffbe3;
-            border-left: 3px solid #f59e0b;
-            padding: 8px 10px;
-            font-size: 0.8rem;
-            border-radius: 4px;
-            margin-top: 6px;
-        }
-
         /* Conversor */
         .converter-box {
             background: #2d3748;
@@ -155,19 +148,30 @@
         }
 
         .rating { color: #f59e0b; font-weight: bold; font-size: 0.8rem; }
-        .reserve-tag { font-size: 0.72rem; padding: 2px 5px; border-radius: 4px; display: inline-block; margin-top: 4px; }
-        .reserve-yes { background: #fee2e2; color: #991b1b; }
-        .reserve-no { background: #dcfce7; color: #166534; }
 
         .phrase-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
         .phrase-box { background: #f0ede6; padding: 8px; border-radius: 6px; font-size: 0.8rem; }
         .phrase-box strong { color: var(--accent); display: block; }
         
-        /* Table Styles for Budget */
         .budget-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin-top: 10px; }
         .budget-table th { background-color: var(--primary-dark); color: white; padding: 8px; text-align: left; }
         .budget-table td { border-bottom: 1px solid #eee; padding: 8px; }
         .budget-table tr:nth-child(even) { background-color: #fafafa; }
+
+        /* Cajas editables */
+        .editable-msg {
+            width: 100%;
+            height: 150px;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 0.8rem;
+            font-family: inherit;
+            box-sizing: border-box;
+            resize: vertical;
+            margin-top: 6px;
+        }
 
         /* Navegación */
         nav {
@@ -189,12 +193,6 @@
 
         nav button.active { color: var(--primary-dark); font-weight: bold; }
         nav button span { font-size: 1.1rem; margin-bottom: 2px; }
-        
-        .code-box {
-            background: #f1f5f9; border: 1px solid #cbd5e1;
-            padding: 8px; border-radius: 6px; font-size: 0.75rem;
-            font-family: monospace; white-space: pre-wrap; margin-top: 5px;
-        }
     </style>
 </head>
 <body>
@@ -208,7 +206,6 @@
 
         <!-- PESTAÑA 1: ITINERARIO DETALLADO -->
         <div id="itinerario" class="tab-content active">
-            
             <div class="card">
                 <h3><span class="badge">10 SEP</span> Llegada a El Cairo</h3>
                 <p><strong>13:25 - 22:25:</strong> Vuelo SVQ -> CAI (Iberia / Air Nostrum)[cite: 1].</p>
@@ -334,14 +331,14 @@
 
             <div class="card">
                 <h3><span class="badge">17 SEP</span> Regreso vía Milán</h3>
-                <p><strong>11:30 AM:</strong> Transfer privado desde el Blue Nile House al Aeropuerto de Lúxor (LXR)[cite: 1, 2].</p>
+                <p><strong>11:30 AM:</strong> Transfer privado desde el Blue Nile House al Aeropuerto de Lúxor (LXR)[cite: 1].</p>
                 <a href="https://maps.google.com/?q=Luxor+International+Airport" target="_blank" class="btn-link btn-maps">📍 Aeropuerto Lúxor</a>
 
-                <p><strong>14:10 PM:</strong> Vuelo Lúxor -> Milán Malpensa (easyJet U23990)[cite: 2].</p>
-                <p><strong>Noche en Milán:</strong> Alojamiento en <em>Holiday Inn Express Milan - Malpensa Airport</em> (Conf: 24049821, Desayuno incl.)[cite: 3].</p>
+                <p><strong>14:10 PM:</strong> Vuelo Lúxor -> Milán Malpensa (easyJet U23990).</p>
+                <p><strong>Noche en Milán:</strong> Alojamiento en <em>Holiday Inn Express Milan - Malpensa Airport</em> (Conf: 24049821, Desayuno incl.).</p>
                 <a href="https://maps.google.com/?q=Holiday+Inn+Express+Milan+Malpensa+Airport" target="_blank" class="btn-link btn-maps">📍 Hotel Malpensa</a>
 
-                <p><strong>Viernes 18 SEP (10:20 AM):</strong> Llegada final a Sevilla (SVQ)[cite: 2].</p>
+                <p><strong>Viernes 18 SEP (10:20 AM):</strong> Llegada final a Sevilla (SVQ).</p>
             </div>
         </div>
 
@@ -439,7 +436,7 @@
             </div>
         </div>
 
-        <!-- PESTAÑA 4: PAGOS, CONVERSOR Y PRESUPUESTO -->
+        <!-- PESTAÑA 4: PAGOS Y CONVERSOR -->
         <div id="pagos" class="tab-content">
             <div class="converter-box">
                 <h3 style="margin:0; font-size:1rem; color:#d4af37;">🧮 Conversor Euros ↔ Libras</h3>
@@ -477,23 +474,45 @@
             </div>
         </div>
 
-        <!-- PESTAÑA 5: REGLAS, CHECKLIST Y CONTRATACIONES -->
+        <!-- PESTAÑA 5: MENSAJES EDITABLES CON TRADUCTOR Y WHATSAPP -->
         <div id="reglas" class="tab-content">
             <div class="card">
-                <h3>📱 Plantillas WhatsApp Servicios</h3>
+                <h3>📱 Plantillas Editables para WhatsApp</h3>
+                
+                <!-- MENSAJE GIZA -->
                 <p><strong>1. Hotel Giza (Grensha Pyramids Inn)</strong></p>
-                <div class="code-box">Hola, somos la familia Vega. Queremos reservar para los días 11 y 12 de septiembre un chofer privado con vehículo con aire acondicionado y un guía egiptólogo de habla hispana para visitar Giza, GEM, Saqqara, Memphis y Cairo Histórico. Por favor, confirmadnos disponibilidad y precio total.</div>
-                <a href="https://wa.me/201009193772" class="btn-link btn-whatsapp" target="_blank">📲 Enviar a Hotel Giza</a>
+                <textarea id="msgGiza" class="editable-msg">Hola, somos la familia Vega (Reserva Booking N.º 6242.686.796). Os recordamos que ya tenemos confirmado el transfer de llegada al aeropuerto del jueves 10 de septiembre (Vuelo Iberia IB1903, llegada 22:25h, 3 adultos).
 
-                <hr style="border:0; border-top:1px dashed #eee; margin:10px 0;">
+Queremos contratar adicionalmente chófer privado con vehículo AC y guía egiptólogo en español:
+- Viernes 11 Sep (Día completo): Mañana: Necrópolis de Giza (Pirámides/Esfinge). Tarde: Gran Museo Egipcio (GEM).
+- Sábado 12 Sep (Día completo): Mañana: Saqqara (Zoser) y Memphis. Tarde: Ciudadela, Mezquita Alabastro y Bazar Khan el-Khalili (con cena allí y regreso nocturno).
+- Domingo 13 Sep (Mañana - Solo chófer/vehículo AC): 09:00h Salida hotel con maletas -> 09:30-11:30h Espera en Barrio Copto -> 12:30h Llegada Aeropuerto El Cairo T3 (Vuelo EgyptAir MS066 14:55h).
 
+Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Gracias!</textarea>
+                
+                <div>
+                    <button class="btn-link btn-translate" onclick="translateMsg('msgGiza')">🌐 Traducir a Inglés</button>
+                    <button class="btn-link btn-whatsapp" onclick="sendWhatsApp('msgGiza', '201009193772')">📲 Enviar a Hotel Giza</button>
+                </div>
+
+                <hr style="border:0; border-top:1px dashed #eee; margin:15px 0;">
+
+                <!-- MENSAJE LUXOR -->
                 <p><strong>2. Hotel Lúxor (Blue Nile House)</strong></p>
-                <div class="code-box">Hola, somos Armando Vega y familia (reserva del 13 al 17 Sep). Queremos reservar con vosotros:
-1. Transfer recogida aeropuerto Lúxor el 13/Sep a las 15:55 (MS066).
-2. Globo Aerostático (3 pers) la mañana del 15/Sep.
-3. Coche privado con guía en español para visitas orilla este y oeste.
-4. Transfer salida aeropuerto Lúxor el 17/Sep a las 11:30 AM.</div>
-                <a href="https://wa.me/201002677970" class="btn-link btn-whatsapp" target="_blank">📲 Enviar a Hotel Lúxor</a>
+                <textarea id="msgLuxor" class="editable-msg">Hola, somos la familia Vega (Reserva Booking N.º 5525.583.178, del 13 al 17 de septiembre). Queremos organizar los traslados y visitas con vosotros:
+
+1. Domingo 13 Sep (Tarde): Transfer de recogida en Aeropuerto de Lúxor (Vuelo EgyptAir MS066, llegada 15:55h).
+2. Lunes 14 Sep (Día completo): Chófer y guía en español. Mañana: Karnak. Tarde: Templo de Lúxor al atardecer (el servicio termina a las 19:00h en el templo, volvemos en ferry).
+3. Martes 15 Sep (Mañana): Vuelo en Globo al amanecer (3 pers) + Chófer y guía en español para Valle de los Reyes (Tumba Seti I KV17), Hatshepsut y Memnón.
+4. Miércoles 16 Sep (Solo Mañana): Chófer/taxi por la mañana para Medinet Habu y traslado al restaurante. El servicio finaliza tras el almuerzo.
+5. Jueves 17 Sep (Mediodía): Transfer salida al Aeropuerto de Lúxor a las 11:30 AM (Vuelo easyJet U23990 14:10h).
+
+Por favor, confirmadnos disponibilidad y precio total para 3 personas. ¡Muchas gracias!</textarea>
+                
+                <div>
+                    <button class="btn-link btn-translate" onclick="translateMsg('msgLuxor')">🌐 Traducir a Inglés</button>
+                    <button class="btn-link btn-whatsapp" onclick="sendWhatsApp('msgLuxor', '201002677970')">📲 Enviar a Hotel Lúxor</button>
+                </div>
             </div>
 
             <div class="card">
@@ -552,6 +571,32 @@
             document.getElementById(tabId).classList.add('active');
             btn.classList.add('active');
             window.scrollTo(0, 0);
+        }
+
+        // Lógica de traducción automática instantánea
+        async function translateMsg(elementId) {
+            const textarea = document.getElementById(elementId);
+            const text = textarea.value;
+            if (!text.trim()) return;
+
+            textarea.value = "Traduciendo mensaje...";
+            try {
+                const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=es&tl=en&dt=t&q=${encodeURIComponent(text)}`);
+                const data = await res.json();
+                let translatedText = "";
+                data[0].forEach(item => { if (item[0]) translatedText += item[0]; });
+                textarea.value = translatedText;
+            } catch (e) {
+                alert("No se pudo traducir automáticamente. Revisa tu conexión a internet.");
+                textarea.value = text;
+            }
+        }
+
+        // Enviar por WhatsApp
+        function sendWhatsApp(elementId, phone) {
+            const text = document.getElementById(elementId).value;
+            const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+            window.open(url, '_blank');
         }
     </script>
 </body>
